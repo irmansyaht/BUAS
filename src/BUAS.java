@@ -57,7 +57,8 @@ public class BUAS {
         //- Character
         //- Items
         //- BGM/SFX
-        //- (Upcoming)
+        //- Merchant
+        //- Combat
 
         window = new JFrame();
         window.setSize(800, 600);
