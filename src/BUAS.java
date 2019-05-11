@@ -52,6 +52,14 @@ public class BUAS {
 
     public BUAS() {
 
+        //TAMBAH CLASS
+        //- Monster
+        //- Character
+        //- Items
+        //- BGM/SFX
+        //- Merchant
+        //- Combat
+
         window = new JFrame();
         window.setSize(800, 600);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
