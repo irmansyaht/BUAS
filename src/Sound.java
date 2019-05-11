@@ -5,11 +5,12 @@ import java.io.File;
 
 public class Sound {
 
-    static String attackSound, monsterSound, goSound, talkSound, obtainSound, winSound, loseSound, bgMusic, musicOnOff;
+    static String attackSound, monsterSound, goSound, talkSound, eatSound, obtainSound, winSound, loseSound, bgMusic, musicOnOff;
     static AttackSound as = new AttackSound();
     static MonsterSound ms = new MonsterSound();
     static GoSound gs = new GoSound();
     static TalkSound ts = new TalkSound();
+    static EatSound es = new EatSound();
     static ObtainSound os = new ObtainSound();
     static WinSound ws = new WinSound();
     static LoseSound ls = new LoseSound();
@@ -105,6 +106,27 @@ public class Sound {
         public void stop(){
             clip.stop();
             clip.close();
+        }
+    }
+
+    public static class EatSound{
+        Clip clip;
+
+        public void setFile(String soundFileName){
+            try{
+                File file = new File(soundFileName);
+                AudioInputStream sound = AudioSystem.getAudioInputStream(file);
+                clip = AudioSystem.getClip();
+                clip.open(sound);
+            }
+            catch (Exception e){
+
+            }
+        }
+
+        public void play(){
+            clip.setFramePosition(0);
+            clip.start();
         }
     }
 

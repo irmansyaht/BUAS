@@ -57,6 +57,9 @@ public class ChoiceHandler implements ActionListener {
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.utara();
+                        Sound.eatSound = ".//res//157049__slave2thelight__zombieb.wav";
+                        Sound.es.setFile(Sound.eatSound);
+                        Sound.es.play();
                         break;
                     case "c2":
                         Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
