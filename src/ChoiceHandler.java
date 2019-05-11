@@ -11,6 +11,9 @@ public class ChoiceHandler implements ActionListener {
             case "pintuGerbang":
                 switch(yourChoice){
                     case "c1":
+                        Sound.talkSound = ".//res//243379_johnsonbrandediting_charlie-brown-teacher-wa-wa-effect (online-audio-converter.com).wav";
+                        Sound.ts.setFile(Sound.talkSound);
+                        Sound.ts.play();
                         if(BUAS.silverRing==1){
                             BUAS.ending();
                         }
@@ -18,57 +21,131 @@ public class ChoiceHandler implements ActionListener {
                             BUAS.bicara();
                         }
                         break;
-                    case "c2": BUAS.pukulPenjaga();break;
-                    case "c3": BUAS.persimpangan();break;
+                    case "c2":
+                        Sound.attackSound = ".//res//27858__erdie__sword04.wav";
+                        Sound.as.setFile(Sound.attackSound);
+                        Sound.as.play();
+                        BUAS.pukulPenjaga();
+                        break;
+                    case "c3":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.persimpangan();
+                        break;
                 }
                 break;
             case "bicara":
+                Sound.ts.stop();
                 switch(yourChoice){
-                    case "c1": BUAS.pintuGerbang(); break;
+                    case "c1":
+                        BUAS.pintuGerbang();
+                        break;
                 }
                 break;
             case "pukul penjaga":
                 switch(yourChoice){
-                    case "c1": BUAS.pintuGerbang(); break;
+                    case "c1":
+                        BUAS.pintuGerbang();
+                        break;
                 }
                 break;
             case "persimpangan":
                 switch(yourChoice){
-                    case "c1": BUAS.utara(); break;
-                    case "c2": BUAS.timur();break;
-                    case "c3": BUAS.pintuGerbang(); break;
-                    case "c4": BUAS.barat();break;
+                    case "c1":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.utara();
+                        break;
+                    case "c2":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.timur();
+                        Sound.obtainSound = ".//res//345297__scrampunk__itemize.wav";
+                        Sound.os.setFile(Sound.obtainSound);
+                        Sound.os.play();
+                        break;
+                    case "c3":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.pintuGerbang();
+                        break;
+                    case "c4":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.barat();
+                        break;
                 }
                 break;
             case "utara":
                 switch(yourChoice){
-                    case "c1": BUAS.persimpangan(); break;
+                    case "c1":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.persimpangan();
+                        break;
                 }
                 break;
             case "timur":
                 switch(yourChoice){
-                    case "c1": BUAS.persimpangan(); break;
+                    case "c1":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.persimpangan();
+                        break;
                 }
                 break;
             case "barat":
                 switch(yourChoice){
-                    case "c1": BUAS.bertarung(); break;
-                    case "c2": BUAS.persimpangan(); break;
+                    case "c1":
+                        Sound.attackSound = ".//res//27858__erdie__sword04.wav";
+                        Sound.as.setFile(Sound.attackSound);
+                        Sound.as.play();
+                        BUAS.bertarung();
+                        break;
+                    case "c2":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.persimpangan();
+                        break;
                 }
                 break;
             case "bertarung":
                 switch(yourChoice){
-                    case "c1": BUAS.playerAttack();break;
-                    case "c2": BUAS.persimpangan(); break;
+                    case "c1":
+                        Sound.attackSound = ".//res//27858__erdie__sword04.wav";
+                        Sound.as.setFile(Sound.attackSound);
+                        Sound.as.play();
+                        BUAS.playerAttack();
+                        break;
+                    case "c2":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.persimpangan();
+                        break;
                 }
                 break;
             case "playerAttack":
                 switch(yourChoice){
                     case "c1":
                         if(BUAS.monsterHP<1){
+                            Sound.winSound = ".//res//277441__xtrgamr__tones-of-victory.wav";
+                            Sound.ws.setFile(Sound.winSound);
+                            Sound.ws.play();
                             BUAS.win();
                         }
                         else{
+                            Sound.monsterSound = ".//res//340162_flechabr_short-monster-roar (online-audio-converter.com).wav";
+                            Sound.ms.setFile(Sound.monsterSound);
+                            Sound.ms.play();
                             BUAS.monsterAttack();
                         }
                         break;
@@ -78,6 +155,9 @@ public class ChoiceHandler implements ActionListener {
                 switch(yourChoice){
                     case "c1":
                         if(BUAS.playerHP<1){
+                            Sound.loseSound = ".//res//157218_adamweeden_video-game-die-or-lose-life (online-audio-converter.com).wav";
+                            Sound.ls.setFile(Sound.loseSound);
+                            Sound.ls.play();
                             BUAS.lose();
                         }
                         else{
@@ -88,7 +168,11 @@ public class ChoiceHandler implements ActionListener {
                 break;
             case "win":
                 switch(yourChoice){
-                    case "c1": BUAS.persimpangan();
+                    case "c1":
+                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.persimpangan();
                 }
                 break;
 

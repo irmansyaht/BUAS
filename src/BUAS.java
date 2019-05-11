@@ -15,34 +15,21 @@ public class BUAS {
 
     JFrame window;
     static Container con;
-    static JPanel titleNamePanel;
-    static JPanel startButtonPanel;
-    static JPanel mainTextPanel;
-    static JPanel choiceButtonPanel;
-    static JPanel playerPanel;
-    static JPanel titleNamePanel1;
-    JLabel titleNameLabel;
-    static JLabel hpLabel;
-    static JLabel hpLabelNumber;
-    static JLabel weaponLabel;
-    static JLabel weaponLabelName;
-    JLabel titleNameLabel1;
+    static JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, titleNamePanel1, musicPanel;
+    JLabel titleNameLabel, titleNameLabel1;
+    static JLabel hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     static Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     JButton startButton;
-    static JButton choice1;
-    static JButton choice2;
-    static JButton choice3;
-    static JButton choice4;
+    static JButton musicButton;
+    static JButton choice1, choice2, choice3, choice4;
     static JTextArea mainTextArea;
-    static int playerHP;
-    static int monsterHP;
-    static int silverRing;
-    static String weapon;
-    static String position;
+    static int playerHP, monsterHP, silverRing;
+    static String weapon, position;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     static ChoiceHandler choiceHandler = new ChoiceHandler();
+    static SoundHandler soundHandler = new SoundHandler();
 
 
     public static void main(String[] args) {
@@ -65,7 +52,6 @@ public class BUAS {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
-        window.setVisible(true);
         con = window.getContentPane();
 
         titleNamePanel = new JPanel();
@@ -84,7 +70,7 @@ public class BUAS {
 
 
         startButtonPanel = new JPanel();
-        startButtonPanel.setBounds(300, 400, 200, 100);
+        startButtonPanel.setBounds(300, 400, 200, 50);
         startButtonPanel.setBackground(Color.black);
 
         startButton = new JButton("MULAI");
@@ -94,13 +80,29 @@ public class BUAS {
         startButton.addActionListener(tsHandler);
         startButton.setFocusPainted(false);
 
+        musicPanel = new JPanel();
+        musicPanel.setBounds(300, 500, 200, 50);
+        musicPanel.setBackground(Color.black);
+        musicButton = new JButton("Play BGM");
+        musicButton.setBackground(Color.black);
+        musicButton.setForeground(Color.white);
+        musicButton.addActionListener(soundHandler);
+        musicButton.setActionCommand("musicB");
+        musicButton.setFocusPainted(false);
+        Sound.bgMusic = ".//res//Adventures - A Himitsu (No Copyright Music) (online-audio-converter.com).wav";
+        Sound.musicOnOff = "off";
+
         titleNamePanel.add(titleNameLabel);
         titleNamePanel1.add(titleNameLabel1);
         startButtonPanel.add(startButton);
+        musicPanel.add(musicButton);
 
         con.add(titleNamePanel);
         con.add(titleNamePanel1);
         con.add(startButtonPanel);
+        con.add(musicPanel);
+
+        window.setVisible(true);
     }
 
     public static void createGameScreen() {
@@ -128,7 +130,7 @@ public class BUAS {
         choiceButtonPanel.setLayout(new GridLayout(4, 1));
         con.add(choiceButtonPanel);
 
-         choice1 = new JButton("Pilihan 1");
+        choice1 = new JButton("Pilihan 1");
         choice1.setBackground(Color.black);
         choice1.setForeground(Color.white);
         choice1.setFont(normalFont);
