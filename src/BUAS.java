@@ -123,7 +123,7 @@ public class BUAS {
         window.setVisible(true);
     }
 
-    public static void createGameScreen() {
+    public static void createGameScreen(String choice) {
 
         titleNamePanel.setVisible(false);
         titleNamePanel1.setVisible(false);
