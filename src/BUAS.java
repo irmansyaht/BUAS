@@ -291,22 +291,22 @@ public class BUAS {
 
         if (i < 31){
             monster = new Monster_Goblin();
-            image = new ImageIcon(".//img//res//img//goblin.png");
+            image = new ImageIcon(".//res//img//goblin.png");
             imageLabel.setIcon(image);
         }
         else if (i < 61){
             monster = new Monster_Slime();
-            image = new ImageIcon(".//img//res//img//slime.png");
+            image = new ImageIcon(".//res//img//slime.png");
             imageLabel.setIcon(image);
         }
         else if (i < 91){
             monster = new Monster_Demon();
-            image = new ImageIcon(".//img//res//img//demon.jpg");
+            image = new ImageIcon(".//res//img//demon.jpg");
             imageLabel.setIcon(image);
         }
         else {
             monster = new Monster_Gandalf();
-            image = new ImageIcon(".//img//res//img//gandalf.jpg");
+            image = new ImageIcon(".//res//img//gandalf.jpg");
             imageLabel.setIcon(image);
         }
 

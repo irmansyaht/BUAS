@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8de3e8c0-7ebc-4920-8137-e291ff738fcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/BUAS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BUAS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster_Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster_Goblin.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BUAS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
+            <state relative-caret-position="-15">
+              <caret line="324" column="34" lean-forward="true" selection-start-line="324" selection-start-column="34" selection-end-line="325" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -28,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Monster_Goblin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -38,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/Monster.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -110,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -228,13 +229,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22947000" />
+    <option name="totallyTimeSpent" value="23528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13691376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13691376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -243,7 +243,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -388,7 +388,7 @@
     <entry file="file://$PROJECT_DIR$/src/Monster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -414,8 +414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Monster_Goblin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -428,8 +428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BUAS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
+        <state relative-caret-position="-15">
+          <caret line="324" column="34" lean-forward="true" selection-start-line="324" selection-start-column="34" selection-end-line="325" selection-end-column="33" />
         </state>
       </provider>
     </entry>
