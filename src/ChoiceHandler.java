@@ -8,64 +8,64 @@ public class ChoiceHandler implements ActionListener {
         String yourChoice = event.getActionCommand();
 
         switch(BUAS.position){
-            case "townGate":
+            case "pintuGerbang":
                 switch(yourChoice){
                     case "c1":
                         if(BUAS.silverRing==1){
                             BUAS.ending();
                         }
                         else{
-                            BUAS.talkGuard();
+                            BUAS.bicara();
                         }
                         break;
-                    case "c2": BUAS.attackGuard();break;
-                    case "c3": BUAS.crossRoad();break;
+                    case "c2": BUAS.pukulPenjaga();break;
+                    case "c3": BUAS.persimpangan();break;
                 }
                 break;
-            case "talkGuard":
+            case "bicara":
                 switch(yourChoice){
-                    case "c1": BUAS.townGate(); break;
+                    case "c1": BUAS.pintuGerbang(); break;
                 }
                 break;
-            case "attackGuard":
+            case "pukul penjaga":
                 switch(yourChoice){
-                    case "c1": BUAS.townGate(); break;
+                    case "c1": BUAS.pintuGerbang(); break;
                 }
                 break;
-            case "crossRoad":
+            case "persimpangan":
                 switch(yourChoice){
-                    case "c1": BUAS.north(); break;
-                    case "c2": BUAS.east();break;
-                    case "c3": BUAS.townGate(); break;
-                    case "c4": BUAS.west();break;
+                    case "c1": BUAS.utara(); break;
+                    case "c2": BUAS.timur();break;
+                    case "c3": BUAS.pintuGerbang(); break;
+                    case "c4": BUAS.barat();break;
                 }
                 break;
-            case "north":
+            case "utara":
                 switch(yourChoice){
-                    case "c1": BUAS.crossRoad(); break;
+                    case "c1": BUAS.persimpangan(); break;
                 }
                 break;
-            case "east":
+            case "timur":
                 switch(yourChoice){
-                    case "c1": BUAS.crossRoad(); break;
+                    case "c1": BUAS.persimpangan(); break;
                 }
                 break;
-            case "west":
+            case "barat":
                 switch(yourChoice){
-                    case "c1": BUAS.fight(); break;
-                    case "c2": BUAS.crossRoad(); break;
+                    case "c1": BUAS.bertarung(); break;
+                    case "c2": BUAS.persimpangan(); break;
                 }
                 break;
-            case "fight":
+            case "bertarung":
                 switch(yourChoice){
                     case "c1": BUAS.playerAttack();break;
-                    case "c2": BUAS.crossRoad(); break;
+                    case "c2": BUAS.persimpangan(); break;
                 }
                 break;
             case "playerAttack":
                 switch(yourChoice){
                     case "c1":
-                        if(BUAS.monsterHP<1){
+                        if(BUAS.monster.hp<1){
                             BUAS.win();
                         }
                         else{
@@ -81,14 +81,14 @@ public class ChoiceHandler implements ActionListener {
                             BUAS.lose();
                         }
                         else{
-                            BUAS.fight();
+                            BUAS.bertarung();
                         }
                         break;
                 }
                 break;
             case "win":
                 switch(yourChoice){
-                    case "c1": BUAS.crossRoad();
+                    case "c1": BUAS.persimpangan();
                 }
                 break;
 
