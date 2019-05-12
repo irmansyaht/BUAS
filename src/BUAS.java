@@ -5,18 +5,16 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
+import javax.swing.*;
 
 public class BUAS {
 
     JFrame window;
     static Container con;
-    static JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, titleNamePanel1, musicPanel;
-    JLabel titleNameLabel, titleNameLabel1;
+    static JPanel titleNamePanel, startButtonPanel,imagePanel, mainTextPanel, choiceButtonPanel, playerPanel, titleNamePanel1, musicPanel;
+    JLabel titleNameLabel;
+    JLabel titleNameLabel1;
+    static JLabel imageLabel;
     static JLabel hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     static Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
@@ -26,6 +24,9 @@ public class BUAS {
     static JTextArea mainTextArea;
     static int playerHP, monsterHP, silverRing;
     static String weapon, position;
+    static Monster monster;
+    static ImageIcon image;
+
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     static ChoiceHandler choiceHandler = new ChoiceHandler();
@@ -112,12 +113,12 @@ public class BUAS {
         startButtonPanel.setVisible(false);
 
         mainTextPanel = new JPanel();
-        mainTextPanel.setBounds(100, 100, 600, 250);
+        mainTextPanel.setBounds(50, 350, 430, 250);
         mainTextPanel.setBackground(Color.black);
         con.add(mainTextPanel);
 
         mainTextArea = new JTextArea("");
-        mainTextArea.setBounds(100, 100, 600, 250);
+        mainTextArea.setBounds(50, 350, 430, 250);
         mainTextArea.setBackground(Color.black);
         mainTextArea.setForeground(Color.white);
         mainTextArea.setFont(normalFont);
@@ -125,7 +126,7 @@ public class BUAS {
         mainTextPanel.add(mainTextArea);
 
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(250, 350, 300, 150);
+        choiceButtonPanel.setBounds(500, 350, 250, 150);
         choiceButtonPanel.setBackground(Color.black);
         choiceButtonPanel.setLayout(new GridLayout(4, 1));
         con.add(choiceButtonPanel);
@@ -164,9 +165,9 @@ public class BUAS {
         choiceButtonPanel.add(choice4);
 
         playerPanel = new JPanel();
-        playerPanel.setBounds(100, 15, 600, 50);
+        playerPanel.setBounds(500, 100, 270, 50);
         playerPanel.setBackground(Color.black);
-        playerPanel.setLayout(new GridLayout(1, 4));
+        playerPanel.setLayout(new GridLayout(2, 2));
         con.add(playerPanel);
         hpLabel = new JLabel("HP:");
         hpLabel.setFont(normalFont);
@@ -184,6 +185,18 @@ public class BUAS {
         weaponLabelName.setFont(normalFont);
         weaponLabelName.setForeground(Color.white);
         playerPanel.add(weaponLabelName);
+        imagePanel = new JPanel();
+        imagePanel.setBounds(50, 50, 400, 260);
+        imagePanel.setBackground(Color.black);
+
+        imageLabel = new JLabel();
+
+        image = new ImageIcon(".//res//img//gate.jpg");
+
+        imageLabel.setIcon(image);
+        imagePanel.add(imageLabel);
+        con.add(imagePanel);
+
 
         playerSetup();
 
@@ -200,12 +213,16 @@ public class BUAS {
     }
 
     public static void pintuGerbang() {
+        image = new ImageIcon(".//res//img//gate.jpg");
+        imageLabel.setIcon(image);
+
         position = "pintuGerbang";
         mainTextArea.setText("Kamu berada di sebuah Pintu Gerbang . \nSeorang Pria tua menjaga pintu itu \n\nApa yang akan kamu lakukan?");
         choice1.setText("Bicara pada Penjaga");
         choice2.setText("Pukul Penjaga");
         choice3.setText("Pergi");
         choice4.setText("");
+
     }
 
     public static void bicara() {
@@ -229,15 +246,21 @@ public class BUAS {
     }
 
     public static void persimpangan() {
+        image = new ImageIcon(".//res//img//crossroads.jpg");
+        imageLabel.setIcon(image);
         position = "persimpangan";
         mainTextArea.setText("Kamu berada di persimpangan jalan.\n Kemanakah kamu akan pergi?.");
         choice1.setText("Pergi ke Utara");
         choice2.setText("Pergi ke Timur");
         choice3.setText("Pergi ke Selatan");
         choice4.setText("Pergi ke Barat");
+
     }
 
     public static void utara() {
+        image = new ImageIcon(".//res//img//river.jpg");
+        imageLabel.setIcon(image);
+
         position = "utara";
         mainTextArea.setText("Kamu berada di Sungai. \nKamu menangkap ikan yang berenang di sungai\n Karena terlihat lezat kamu memakannya.\n(HP kamu bertambah 2 setelah memakan ikan)");
         playerHP = playerHP + 2;
@@ -246,9 +269,12 @@ public class BUAS {
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
+
     }
 
     public static void timur() {
+        image = new ImageIcon(".//res//img//sword.png");
+        imageLabel.setIcon(image);
         position = "timur";
         mainTextArea.setText("Kamu berjalan di suatu tempat yang mengerikan.\n Kamu menemukan prajurit yang sudah tidak bernyawa\nKamu melihat pedang dan mengambilnya.\n(Kamu mendapatkan Pedang)");
         weapon = "Pedang";
@@ -257,21 +283,45 @@ public class BUAS {
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
-
     }
 
     public static void barat() {
+
+        int i = new java.util.Random().nextInt(100)+1;
+
+        if (i < 31){
+            monster = new Monster_Goblin();
+            image = new ImageIcon(".//img//res//img//goblin.png");
+            imageLabel.setIcon(image);
+        }
+        else if (i < 61){
+            monster = new Monster_Slime();
+            image = new ImageIcon(".//img//res//img//slime.png");
+            imageLabel.setIcon(image);
+        }
+        else if (i < 91){
+            monster = new Monster_Demon();
+            image = new ImageIcon(".//img//res//img//demon.jpg");
+            imageLabel.setIcon(image);
+        }
+        else {
+            monster = new Monster_Gandalf();
+            image = new ImageIcon(".//img//res//img//gandalf.jpg");
+            imageLabel.setIcon(image);
+        }
+
         position = "barat";
-        mainTextArea.setText("Saat kamu berjalan ke hutan Kamu bertemu dengan Monster BUAS Goblin\n Apa yang akan kamu lakukan?");
+        mainTextArea.setText("Saat kamu berjalan ke hutan Kamu bertemu dengan Monster BUAS " + monster.name + "!\n Apa yang akan kamu lakukan?");
         choice1.setText("Bertarung");
         choice2.setText("Pergi ke Timur");
         choice3.setText("");
         choice4.setText("");
+
     }
 
     public static void bertarung() {
         position = "bertarung";
-        mainTextArea.setText("HP Goblin: " + monsterHP + "\n\nApa yang kamu lakukan?");
+        mainTextArea.setText("HP " + monster.name + ": " + monster.hp + "\n\nApa yang kamu lakukan?");
         choice1.setText("Serang");
         choice2.setText("Kabur");
         choice3.setText("");
@@ -288,10 +338,10 @@ public class BUAS {
         } else if (weapon.equals("Pedang")) {
             playerDamage = new java.util.Random().nextInt(12);
         }
-       mainTextArea.setText("Kamu menyerang Monster BUAS dan memberi " + playerDamage + " kerusakan pada Monster!");
 
-        monsterHP = monsterHP - playerDamage;
-
+        mainTextArea.setText("Kamu menyerang Monster BUAS " + monster.name +
+                " dan memberi " + playerDamage + " kerusakan pada Monster!");
+        monster.hp = monster.hp - playerDamage;
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");
@@ -301,11 +351,11 @@ public class BUAS {
     public static void monsterAttack() {
         position = "monsterAttack";
 
-        int monsterDamage = 0;
+        int monsterDamage = new java.util.Random().nextInt(monster.attack);
 
-        monsterDamage = new java.util.Random().nextInt(6);
+        mainTextArea.setText(monster.attackMessage + "\nMonster BUAS " + monster.name +
+                " menyerang dan memberi kamu " + monsterDamage + " kerusakan!");
 
-        mainTextArea.setText("Monster BUAS menyerang dan memberi kamu " + monsterDamage + " kerusakan!");
 
         playerHP = playerHP - monsterDamage;
         hpLabelNumber.setText("" + playerHP);
@@ -314,6 +364,7 @@ public class BUAS {
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
+
     }
 
     public static void win() {
