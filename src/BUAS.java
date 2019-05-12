@@ -89,7 +89,7 @@ public class BUAS {
         musicButton.addActionListener(soundHandler);
         musicButton.setActionCommand("musicB");
         musicButton.setFocusPainted(false);
-        Sound.bgMusic = ".//res//Adventures - A Himitsu (No Copyright Music) (online-audio-converter.com).wav";
+        Sound.bgMusic = ".//res//sfx//Adventures - A Himitsu (No Copyright Music) (online-audio-converter.com).wav";
         Sound.musicOnOff = "off";
 
         titleNamePanel.add(titleNameLabel);

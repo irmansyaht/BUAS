@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8de3e8c0-7ebc-4920-8137-e291ff738fcd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/ChoiceHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/ChoiceHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/META-INF/Buas.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound$AttackSound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound$AttackSound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound$GoSound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound$GoSound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound$LoseSound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound$LoseSound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound$MonsterSound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound$MonsterSound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound$Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound$Music.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound$ObtainSound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound$ObtainSound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound$TalkSound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound$TalkSound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound$WinSound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound$WinSound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Buas/Sound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Buas/Sound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/157049__slave2thelight__zombieb.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/157218_adamweeden_video-game-die-or-lose-life (online-audio-converter.com).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/243379_johnsonbrandediting_charlie-brown-teacher-wa-wa-effect (online-audio-converter.com).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/267492__snudiorecords__footstep.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/277441__xtrgamr__tones-of-victory.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/27858__erdie__sword04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/340162_flechabr_short-monster-roar (online-audio-converter.com).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/345297__scrampunk__itemize.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Adventures - A Himitsu (No Copyright Music) (online-audio-converter.com).wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChoiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChoiceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sound.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,35 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Sound.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SoundHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ChoiceHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            <state relative-caret-position="243">
+              <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,25 +96,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="BUAS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BUAS" type="462c0819:PsiDirectoryNode" />
+              <item name="Buas1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BUAS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BUAS" type="462c0819:PsiDirectoryNode" />
+              <item name="Buas1" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BUAS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Buas1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,12 +197,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21744000" />
+    <option name="totallyTimeSpent" value="21997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1354009" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13691376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -234,7 +212,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,8 +356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ChoiceHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="243">
+          <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

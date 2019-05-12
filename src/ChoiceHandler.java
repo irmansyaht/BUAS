@@ -11,7 +11,7 @@ public class ChoiceHandler implements ActionListener {
             case "pintuGerbang":
                 switch(yourChoice){
                     case "c1":
-                        Sound.talkSound = ".//res//243379_johnsonbrandediting_charlie-brown-teacher-wa-wa-effect (online-audio-converter.com).wav";
+                        Sound.talkSound = ".//res//sfx//243379_johnsonbrandediting_charlie-brown-teacher-wa-wa-effect (online-audio-converter.com).wav";
                         Sound.ts.setFile(Sound.talkSound);
                         Sound.ts.play();
                         if(BUAS.silverRing==1){
@@ -22,13 +22,13 @@ public class ChoiceHandler implements ActionListener {
                         }
                         break;
                     case "c2":
-                        Sound.attackSound = ".//res//27858__erdie__sword04.wav";
+                        Sound.attackSound = ".//res//sfx//27858__erdie__sword04.wav";
                         Sound.as.setFile(Sound.attackSound);
                         Sound.as.play();
                         BUAS.pukulPenjaga();
                         break;
                     case "c3":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.persimpangan();
@@ -53,31 +53,31 @@ public class ChoiceHandler implements ActionListener {
             case "persimpangan":
                 switch(yourChoice){
                     case "c1":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.utara();
-                        Sound.eatSound = ".//res//157049__slave2thelight__zombieb.wav";
+                        Sound.eatSound = ".//res//sfx//157049__slave2thelight__zombieb.wav";
                         Sound.es.setFile(Sound.eatSound);
                         Sound.es.play();
                         break;
                     case "c2":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.timur();
-                        Sound.obtainSound = ".//res//345297__scrampunk__itemize.wav";
+                        Sound.obtainSound = ".//res//sfx//345297__scrampunk__itemize.wav";
                         Sound.os.setFile(Sound.obtainSound);
                         Sound.os.play();
                         break;
                     case "c3":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.pintuGerbang();
                         break;
                     case "c4":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.barat();
@@ -87,7 +87,7 @@ public class ChoiceHandler implements ActionListener {
             case "utara":
                 switch(yourChoice){
                     case "c1":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.persimpangan();
@@ -97,7 +97,7 @@ public class ChoiceHandler implements ActionListener {
             case "timur":
                 switch(yourChoice){
                     case "c1":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.persimpangan();
@@ -107,13 +107,13 @@ public class ChoiceHandler implements ActionListener {
             case "barat":
                 switch(yourChoice){
                     case "c1":
-                        Sound.attackSound = ".//res//27858__erdie__sword04.wav";
+                        Sound.attackSound = ".//res//sfx//27858__erdie__sword04.wav";
                         Sound.as.setFile(Sound.attackSound);
                         Sound.as.play();
                         BUAS.bertarung();
                         break;
                     case "c2":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.persimpangan();
@@ -123,13 +123,13 @@ public class ChoiceHandler implements ActionListener {
             case "bertarung":
                 switch(yourChoice){
                     case "c1":
-                        Sound.attackSound = ".//res//27858__erdie__sword04.wav";
+                        Sound.attackSound = ".//res//sfx//27858__erdie__sword04.wav";
                         Sound.as.setFile(Sound.attackSound);
                         Sound.as.play();
                         BUAS.playerAttack();
                         break;
                     case "c2":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.persimpangan();
@@ -140,13 +140,13 @@ public class ChoiceHandler implements ActionListener {
                 switch(yourChoice){
                     case "c1":
                         if(BUAS.monsterHP<1){
-                            Sound.winSound = ".//res//277441__xtrgamr__tones-of-victory.wav";
+                            Sound.winSound = ".//res//sfx//277441__xtrgamr__tones-of-victory.wav";
                             Sound.ws.setFile(Sound.winSound);
                             Sound.ws.play();
                             BUAS.win();
                         }
                         else{
-                            Sound.monsterSound = ".//res//340162_flechabr_short-monster-roar (online-audio-converter.com).wav";
+                            Sound.monsterSound = ".//res//sfx//340162_flechabr_short-monster-roar (online-audio-converter.com).wav";
                             Sound.ms.setFile(Sound.monsterSound);
                             Sound.ms.play();
                             BUAS.monsterAttack();
@@ -158,7 +158,7 @@ public class ChoiceHandler implements ActionListener {
                 switch(yourChoice){
                     case "c1":
                         if(BUAS.playerHP<1){
-                            Sound.loseSound = ".//res//157218_adamweeden_video-game-die-or-lose-life (online-audio-converter.com).wav";
+                            Sound.loseSound = ".//res//sfx//157218_adamweeden_video-game-die-or-lose-life (online-audio-converter.com).wav";
                             Sound.ls.setFile(Sound.loseSound);
                             Sound.ls.play();
                             BUAS.lose();
@@ -172,7 +172,7 @@ public class ChoiceHandler implements ActionListener {
             case "win":
                 switch(yourChoice){
                     case "c1":
-                        Sound.goSound = ".//res//267492__snudiorecords__footstep.wav";
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.persimpangan();
