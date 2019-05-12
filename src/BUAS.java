@@ -26,7 +26,7 @@ public class BUAS {
     static JLabel hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     static Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
-    JButton startButton;
+    JButton startButton,continueButton;
     static JButton musicButton;
     static JButton choice1, choice2, choice3, choice4;
     static JTextArea mainTextArea;
@@ -88,6 +88,15 @@ public class BUAS {
         startButton.setFont(normalFont);
         startButton.addActionListener(tsHandler);
         startButton.setFocusPainted(false);
+        startButton.setActionCommand("mulai");
+
+        continueButton = new JButton("LANJUTKAN");
+        continueButton.setBackground(Color.black);
+        continueButton.setForeground(Color.white);
+        continueButton.setFont(normalFont);
+        continueButton.addActionListener(tsHandler);
+        continueButton.setFocusPainted(false);
+        continueButton.setActionCommand("lanjutkan");
 
         musicPanel = new JPanel();
         musicPanel.setBounds(300, 500, 200, 50);
@@ -114,7 +123,7 @@ public class BUAS {
         window.setVisible(true);
     }
 
-    public static void createGameScreen() {
+    public static void createGameScreen(String choice) {
 
         titleNamePanel.setVisible(false);
         titleNamePanel1.setVisible(false);
@@ -205,9 +214,31 @@ public class BUAS {
         imagePanel.add(imageLabel);
         con.add(imagePanel);
 
+        if(choice.equals("mulai")) {
+            playerSetup();
+        }
+        else if(choice.equals("lanjutkan")) {
+            loadData();
+        }
+    }
+    public static void loadData() {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("savefile.txt"));
 
-        playerSetup();
+            playerHP = Integer.parseInt(br.readLine());
+            monsterHP = Integer.parseInt(br.readLine());
+            weapon = br.readLine();
 
+            br.close();
+        }
+        catch(Exception e) {
+
+        }
+
+        weaponLabelName.setText(weapon);
+        hpLabelNumber.setText("" + playerHP);
+
+        pintuGerbang();
     }
 
     public static void playerSetup() {
@@ -227,9 +258,9 @@ public class BUAS {
         position = "pintuGerbang";
         mainTextArea.setText("Kamu berada di sebuah Pintu Gerbang . \nSeorang Pria tua menjaga pintu itu \n\nApa yang akan kamu lakukan?");
         choice1.setText("Bicara pada Penjaga");
-        choice2.setText("Pukul Penjaga");
-        choice3.setText("Pergi");
-        choice4.setText("");
+        choice2.setText("Serang Penjaga");
+        choice3.setText("Bicara pada Seorang Perempuan");
+        choice4.setText("Pergi");
 
     }
 
@@ -251,6 +282,30 @@ public class BUAS {
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
+    }
+    public static void bicaraPerempuan() {
+        position = "bicara perempuan";
+        mainTextArea.setText("Perempuan:\nHalo, dengan berbicara dengan saya kamu dapat menyimpan progress game.");
+        choice1.setText(">");
+        choice2.setText("");
+        choice3.setText("");
+        choice4.setText("");
+
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter("savefile.txt"));
+            bw.write(""+playerHP);
+            bw.newLine();
+            bw.write(""+monsterHP);
+            bw.newLine();
+            bw.write(weapon);
+            bw.close();
+        }
+        catch(Exception e) {
+
+        }
+
+        hpLabelNumber.setText(""+playerHP);
+        weaponLabelName.setText(weapon);
     }
 
     public static void persimpangan() {

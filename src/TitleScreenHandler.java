@@ -4,6 +4,12 @@ import java.awt.event.ActionListener;
 public class TitleScreenHandler implements ActionListener {
 
     public void actionPerformed(ActionEvent event){
-        BUAS.createGameScreen();
+        String yourChoice = event.getActionCommand();
+        if(yourChoice.equals("mulai")) {
+            BUAS.createGameScreen("mulai");
+        }
+        else if(yourChoice.equals("lanjutkan")) {
+            BUAS.createGameScreen("lanjutkan");
+        }
     }
 }
