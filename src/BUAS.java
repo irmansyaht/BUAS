@@ -119,7 +119,7 @@ public class BUAS {
         titleNamePanel.setVisible(false);
         titleNamePanel1.setVisible(false);
         startButtonPanel.setVisible(false);
-
+        musicPanel.setVisible(false);
         mainTextPanel = new JPanel();
         mainTextPanel.setBounds(50, 350, 430, 250);
         mainTextPanel.setBackground(Color.black);
