@@ -1,7 +1,4 @@
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -58,6 +55,8 @@ public class BUAS {
 
     static String[] playerItem = new String[5];
 
+    ImageIcon logo = new ImageIcon(".//res//img//images.png");
+    Image icon = logo.getImage();
 
     public static void main(String[] args) {
 
@@ -79,6 +78,8 @@ public class BUAS {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
+        window.setIconImage(icon);
+        window.setTitle("BUAS - Battle of UAS");
         con = window.getContentPane();
 
         titleNamePanel = new JPanel();
@@ -357,14 +358,14 @@ public class BUAS {
     public static void playerSetup() {
         playerHP = 15;
         monsterHP = 20;
-        weapon = "Pisau";
+        weapon = Item.pisau.toString();
         nameLabelValue.setText(playerName);
         weaponLabelName.setText(weapon);
         hpLabelNumber.setText("" + playerHP);
         inventoryStatus = "close";
 
-        playerItem[0] = "Jamu";
-        playerItem[1] = "Jeruk";
+        playerItem[0] = Item.jamu.toString();
+        playerItem[1] = Item.jeruk.toString();
         playerItem[2] = "";
         playerItem[3] = "";
         playerItem[4] = "";
@@ -483,7 +484,7 @@ public class BUAS {
         }
         if(playerItem[slotNumber] == ""){
             mainTextArea.setText("Kamu berada di Sungai. \nKamu menangkap ikan yang berenang di sungai\nKamu masukkan ikan ke dalam inventory.");
-            playerItem[slotNumber] = "Ikan";
+            playerItem[slotNumber] = Item.ikan.toString();
         }
         else if(playerItem[slotNumber] != ""){
             mainTextArea.setText("Kamu berada di Sungai. \nKamu menangkap ikan yang berenang di sungai\nInventorymu tidak cukup untuk menampung barang lagi.");
@@ -518,12 +519,12 @@ public class BUAS {
         while(playerItem[slotNumber] != "" && slotNumber <4){
             slotNumber++;
         }
-        if(playerItem[slotNumber] == "Pedang" || weapon == "Pedang"){
+        if(playerItem[slotNumber] == Item.pedang.toString() || weapon == Item.pedang.toString()){
             mainTextArea.setText("Kamu sudah punya Pedang.");
         }
         else if(playerItem[slotNumber] == ""){
             mainTextArea.setText("Kamu mengambil Pedang.");
-            playerItem[slotNumber] = "Pedang";
+            playerItem[slotNumber] = Item.pedang.toString();
         }
         else if(playerItem[slotNumber] != ""){
             mainTextArea.setText("Kamu tidak bisa mengambil Pedang.\nInventory penuh");
@@ -583,9 +584,9 @@ public class BUAS {
 
         int playerDamage = 0;
 
-        if (weapon.equals("Pisau")) {
+        if (weapon.equals(Item.pisau.toString())) {
             playerDamage = new java.util.Random().nextInt(3);
-        } else if (weapon.equals("Pedang")) {
+        } else if (weapon.equals(Item.pedang.toString())) {
             playerDamage = new java.util.Random().nextInt(12);
         }
 
@@ -681,12 +682,12 @@ public class BUAS {
             case "Pedang":
                 weapon = "Pedang";
                 weaponLabelName.setText(weapon);
-                playerItem[slotNumber] = "Pisau";
+                playerItem[slotNumber] =Item.pisau.toString();
                 break;
             case "Pisau":
                 weapon = "Pisau";
                 weaponLabelName.setText(weapon);
-                playerItem[slotNumber] = "Pedang";
+                playerItem[slotNumber] = Item.pedang.toString();
                 break;
             case "":
                 break;
