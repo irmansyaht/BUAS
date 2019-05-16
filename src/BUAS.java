@@ -35,7 +35,7 @@ public class BUAS {
     static JLabel imageLabel;
     static JLabel nameLabel, nameLabelValue, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
-    static Font normalFont = new Font("Times New Roman", Font.PLAIN, 24);
+    static Font normalFont = new Font("Times New Roman", Font.PLAIN, 20);
     JButton startButton, continueButton;
     static JButton musicButton;
     static JButton choice1, choice2, choice3, choice4, inventoryButton,
@@ -171,8 +171,8 @@ public class BUAS {
         choiceButtonPanel.setBounds(500, 350, 270, 180);
         choiceButtonPanel.setBackground(Color.black);
         choiceButtonPanel.setLayout(new GridLayout(5, 1));
-        con.add(choiceButtonPanel);
 
+        con.add(choiceButtonPanel);
         choice1 = new JButton("Pilihan 1");
         choice1.setBackground(Color.black);
         choice1.setForeground(Color.white);
@@ -340,7 +340,7 @@ public class BUAS {
 
         textField1 = new JTextField();
         newPlayerPanel.add(textField1);
-        newPlayerButton = new JButton("GO");
+        newPlayerButton = new JButton("Lanjut");
         newPlayerButton.setBackground(Color.black);
         newPlayerButton.setForeground(Color.white);
         newPlayerButton.setFont(normalFont);
@@ -351,7 +351,7 @@ public class BUAS {
 
         position = "newPlayer";
         newmainTextArea.setText("Masukkan nama");
-        newPlayerButton.setText("GO");
+        newPlayerButton.setText("Lanjut");
     }
 
     public static void playerSetup() {
@@ -420,17 +420,17 @@ public class BUAS {
         imageLabel.setIcon(image);
 
         position = "pintuGerbang";
-        mainTextArea.setText("Kamu berada di sebuah Pintu Gerbang . \nSeorang Pria tua menjaga pintu itu \n\nApa yang akan kamu lakukan?");
+        mainTextArea.setText("Kamu berada di sebuah Pintu Gerbang.\nSeorang Pria tua menjaga pintu itu \n\nApa yang akan kamu lakukan?");
         choice1.setText("Bicara pada Penjaga");
         choice2.setText("Pukul Penjaga");
-        choice3.setText("Bicara pada Perempuan");
+        choice3.setText("Penginapan");
         choice4.setText("Pergi");
 
     }
 
     public static void bicara() {
         position = "bicara";
-        mainTextArea.setText("Penjaga:\nCincin Perak kerajaan Dicuri oleh Seorang Monster BUAS. Cepat ambil kembali Cincin Perak kami dari Monster BUAS itu.");
+        mainTextArea.setText("Penjaga:\nCincin Perak kerajaan Dicuri oleh Seorang Monster BUAS.Cepat ambil kembali Cincin Perak kami dari Monster BUAS itu.");
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");
@@ -439,7 +439,7 @@ public class BUAS {
 
     public static void pukulPenjaga() {
         position = "pukul penjaga";
-        mainTextArea.setText("Penjaga:\n Dasar orang aneh masih berani kamu ngelawan orang tua\nPenjaga tersebut kemudian menjewer kuping anda.\n(Kamu menerima 3 kerusakan)");
+        mainTextArea.setText("Penjaga:\n Dasar orang aneh masih berani kamu melawanku.\nPenjaga tersebut kemudian menjewer kuping anda.\n(Kamu menerima 3 kerusakan)");
         playerHP = playerHP - 3;
         hpLabelNumber.setText("" + playerHP);
         choice1.setText(">");
@@ -450,7 +450,7 @@ public class BUAS {
 
     public static void bicaraPerempuan() {
         position = "bicara perempuan";
-        mainTextArea.setText("Perempuan:\nHalo, dengan berbicara dengan saya kamu sudah menyimpan progress game.");
+        mainTextArea.setText("Perempuan:\nHalo,Jika "+playerName+" datang kemari data kamu aman.");
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");
@@ -636,11 +636,11 @@ public class BUAS {
 
         mainTextArea.setText("Kamu terluka cukup parah dan meninggal terbunuh Monster\n\n");
 
-        choice1.setText("");
+        choice1.setText("Halaman Awal");
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
-        choice1.setVisible(false);
+        choice1.setVisible(true);
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
@@ -649,13 +649,13 @@ public class BUAS {
     public static void ending() {
         position = "ending";
 
-        mainTextArea.setText("Penjaga: Oh bagus nak kamu menemukan cincin kerajaan.\nTerima kasih sekarang kami mengakuimu.\n");
+        mainTextArea.setText("Penjaga: Oh bagus, "+playerName+" kamu menemukan cincin tersebut.\nTerima kasih sekarang kami mengakuimu.\n");
 
-        choice1.setText("");
+        choice1.setText("Halaman Awal");
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
-        choice1.setVisible(false);
+        choice1.setVisible(true);
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
@@ -691,6 +691,7 @@ public class BUAS {
             case "":
                 break;
         }
+
     }
 
 }

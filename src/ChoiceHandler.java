@@ -12,7 +12,8 @@ public class ChoiceHandler implements ActionListener {
                 switch(yourChoice){
                     case "c1":
                         String username = BUAS.textField1.getText();
-                        if(!username.equals("")) {
+                        UsernameValidator usernameValidator = new UsernameValidator();
+                        if(usernameValidator.validate(username)== true) {
                             BUAS.playerName = username;
                             BUAS.createGameScreen("mulai");
                         }
@@ -218,6 +219,20 @@ public class ChoiceHandler implements ActionListener {
                 }
                 break;
 
+            case "ending":
+                switch (yourChoice){
+                    case "c1":
+                        String[]args = {};
+                        BUAS.main(args);
+                }
+                break;
+            case "lose":
+                switch (yourChoice){
+                    case "c1":
+                        String[]args = {};
+                        BUAS.main(args);
+                }
+                break;
         }
 
 
