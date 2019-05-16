@@ -28,6 +28,12 @@ public class ChoiceHandler implements ActionListener {
                         BUAS.pukulPenjaga();
                         break;
                     case "c3":
+                        Sound.talkSound = ".//res//sfx//243379_johnsonbrandediting_charlie-brown-teacher-wa-wa-effect (online-audio-converter.com).wav";
+                        Sound.ts.setFile(Sound.talkSound);
+                        Sound.ts.play();
+                        BUAS.bicaraPerempuan();
+                        break;
+                    case "c4":
                         Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
@@ -48,6 +54,11 @@ public class ChoiceHandler implements ActionListener {
                     case "c1":
                         BUAS.pintuGerbang();
                         break;
+                }
+                break;
+            case "bicara perempuan":
+                switch(yourChoice){
+                    case "c1": BUAS.pintuGerbang(); break;
                 }
                 break;
             case "persimpangan":
