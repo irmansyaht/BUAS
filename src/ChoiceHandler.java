@@ -139,7 +139,7 @@ public class ChoiceHandler implements ActionListener {
             case "playerAttack":
                 switch(yourChoice){
                     case "c1":
-                        if(BUAS.monsterHP<1){
+                        if(BUAS.monster.hp<1){
                             Sound.winSound = ".//res//sfx//277441__xtrgamr__tones-of-victory.wav";
                             Sound.ws.setFile(Sound.winSound);
                             Sound.ws.play();
