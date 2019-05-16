@@ -77,9 +77,7 @@ public class ChoiceHandler implements ActionListener {
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();
                         BUAS.timur();
-                        Sound.obtainSound = ".//res//sfx//345297__scrampunk__itemize.wav";
-                        Sound.os.setFile(Sound.obtainSound);
-                        Sound.os.play();
+
                         break;
                     case "c3":
                         Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
@@ -106,6 +104,25 @@ public class ChoiceHandler implements ActionListener {
                 }
                 break;
             case "timur":
+                switch(yourChoice){
+                    case "c1":
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.persimpangan();
+                        break;
+                    case "c2":
+                        Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
+                        Sound.gs.setFile(Sound.goSound);
+                        Sound.gs.play();
+                        BUAS.ambilPedang();
+                        Sound.obtainSound = ".//res//sfx//345297__scrampunk__itemize.wav";
+                        Sound.os.setFile(Sound.obtainSound);
+                        Sound.os.play();
+                        break;
+                }
+                break;
+            case "ambil pedang":
                 switch(yourChoice){
                     case "c1":
                         Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";

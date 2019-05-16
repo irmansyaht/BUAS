@@ -29,19 +29,20 @@ public class BUAS {
 
     JFrame window;
     static Container con;
-    static JPanel titleNamePanel, startButtonPanel,imagePanel, mainTextPanel, choiceButtonPanel, playerPanel, titleNamePanel1, musicPanel;
+    static JPanel titleNamePanel, startButtonPanel,imagePanel, mainTextPanel, choiceButtonPanel, playerPanel, titleNamePanel1, musicPanel, inventoryPanel;
     JLabel titleNameLabel;
     JLabel titleNameLabel1;
     static JLabel imageLabel;
     static JLabel hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
-    static Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
+    static Font normalFont = new Font("Times New Roman", Font.PLAIN, 24);
     JButton startButton, continueButton;
     static JButton musicButton;
-    static JButton choice1, choice2, choice3, choice4;
+    static JButton choice1, choice2, choice3, choice4, inventoryButton,
+                    itemButton1, itemButton2, itemButton3, itemButton4, itemButton5;
     static JTextArea mainTextArea;
     static int playerHP, monsterHP, silverRing;
-    static String weapon, position;
+    static String weapon, position, inventoryStatus, clickedButton;
     static Monster monster;
     static ImageIcon image;
 
@@ -49,6 +50,9 @@ public class BUAS {
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     static ChoiceHandler choiceHandler = new ChoiceHandler();
     static SoundHandler soundHandler = new SoundHandler();
+    static InventoryHandler iHandler = new InventoryHandler();
+
+    static String[] playerItem = new String[5];
 
 
     public static void main(String[] args) {
@@ -67,21 +71,21 @@ public class BUAS {
         //- Combat
 
         window = new JFrame();
-        window.setSize(800, 600);
+        window.setSize(1000, 650);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
         con = window.getContentPane();
 
         titleNamePanel = new JPanel();
-        titleNamePanel.setBounds(100, 100, 600, 150);
+        titleNamePanel.setBounds(200, 100, 600, 150);
         titleNamePanel.setBackground(Color.black);
         titleNameLabel = new JLabel("BUAS");
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
 
         titleNamePanel1 = new JPanel();
-        titleNamePanel1.setBounds(100, 250, 600, 50);
+        titleNamePanel1.setBounds(200, 250, 600, 50);
         titleNamePanel1.setBackground(Color.black);
         titleNameLabel1 = new JLabel("Battle of UAS");
         titleNameLabel1.setForeground(Color.white);
@@ -89,7 +93,7 @@ public class BUAS {
 
 
         startButtonPanel = new JPanel();
-        startButtonPanel.setBounds(300, 400, 200, 100);
+        startButtonPanel.setBounds(400, 400, 200, 100);
         startButtonPanel.setBackground(Color.black);
 
         startButton = new JButton("MULAI");
@@ -109,7 +113,7 @@ public class BUAS {
         continueButton.setActionCommand("lanjutkan");
 
         musicPanel = new JPanel();
-        musicPanel.setBounds(300, 500, 200, 50);
+        musicPanel.setBounds(400, 500, 200, 50);
         musicPanel.setBackground(Color.black);
         musicButton = new JButton("Play BGM");
         musicButton.setBackground(Color.black);
@@ -154,9 +158,9 @@ public class BUAS {
         mainTextPanel.add(mainTextArea);
 
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(500, 350, 250, 150);
+        choiceButtonPanel.setBounds(500, 350, 270, 180);
         choiceButtonPanel.setBackground(Color.black);
-        choiceButtonPanel.setLayout(new GridLayout(4, 1));
+        choiceButtonPanel.setLayout(new GridLayout(5, 1));
         con.add(choiceButtonPanel);
 
         choice1 = new JButton("Pilihan 1");
@@ -192,8 +196,66 @@ public class BUAS {
         choice4.setActionCommand("c4");
         choiceButtonPanel.add(choice4);
 
+        inventoryButton = new JButton("[ Inventory ]");
+        inventoryButton.setBackground(Color.white);
+        inventoryButton.setForeground(Color.black);
+        inventoryButton.setFont(normalFont);
+        inventoryButton.setFocusPainted(false);
+        inventoryButton.addActionListener(iHandler);
+        inventoryButton.setActionCommand("inventoryButton");
+        choiceButtonPanel.add(inventoryButton);
+
+        inventoryPanel = new JPanel();
+        inventoryPanel.setBounds(770, 350, 180, 180);
+        inventoryPanel.setBackground(Color.black);
+        inventoryPanel.setLayout(new GridLayout(5, 1));
+        con.add(inventoryPanel);
+
+        itemButton1 = new JButton();
+        itemButton1.setBackground(Color.black);
+        itemButton1.setForeground(Color.white);
+        itemButton1.setFont(normalFont);
+        itemButton1.setFocusPainted(false);
+        itemButton1.addActionListener(iHandler);
+        itemButton1.setActionCommand("item1");
+        itemButton2 = new JButton();
+        itemButton2.setBackground(Color.black);
+        itemButton2.setForeground(Color.white);
+        itemButton2.setFont(normalFont);
+        itemButton2.setFocusPainted(false);
+        itemButton2.addActionListener(iHandler);
+        itemButton2.setActionCommand("item2");
+        itemButton3 = new JButton();
+        itemButton3.setBackground(Color.black);
+        itemButton3.setForeground(Color.white);
+        itemButton3.setFont(normalFont);
+        itemButton3.setFocusPainted(false);
+        itemButton3.addActionListener(iHandler);
+        itemButton3.setActionCommand("item3");
+        itemButton4 = new JButton();
+        itemButton4.setBackground(Color.black);
+        itemButton4.setForeground(Color.white);
+        itemButton4.setFont(normalFont);
+        itemButton4.setFocusPainted(false);
+        itemButton4.addActionListener(iHandler);
+        itemButton4.setActionCommand("item4");
+        itemButton5 = new JButton();
+        itemButton5.setBackground(Color.black);
+        itemButton5.setForeground(Color.white);
+        itemButton5.setFont(normalFont);
+        itemButton5.setFocusPainted(false);
+        itemButton5.addActionListener(iHandler);
+        itemButton5.setActionCommand("item5");
+        inventoryPanel.add(itemButton1);
+        inventoryPanel.add(itemButton2);
+        inventoryPanel.add(itemButton3);
+        inventoryPanel.add(itemButton4);
+        inventoryPanel.add(itemButton5);
+
+        inventoryPanel.setVisible(false);
+
         playerPanel = new JPanel();
-        playerPanel.setBounds(500, 100, 270, 50);
+        playerPanel.setBounds(600, 100, 270, 50);
         playerPanel.setBackground(Color.black);
         playerPanel.setLayout(new GridLayout(2, 2));
         con.add(playerPanel);
@@ -214,7 +276,7 @@ public class BUAS {
         weaponLabelName.setForeground(Color.white);
         playerPanel.add(weaponLabelName);
         imagePanel = new JPanel();
-        imagePanel.setBounds(50, 50, 400, 260);
+        imagePanel.setBounds(100, 50, 400, 260);
         imagePanel.setBackground(Color.black);
 
         imageLabel = new JLabel();
@@ -239,6 +301,13 @@ public class BUAS {
         weapon = "Pisau";
         weaponLabelName.setText(weapon);
         hpLabelNumber.setText("" + playerHP);
+        inventoryStatus = "close";
+
+        playerItem[0] = "Jamu";
+        playerItem[1] = "Jeruk";
+        playerItem[2] = "";
+        playerItem[3] = "";
+        playerItem[4] = "";
 
         pintuGerbang();
     }
@@ -271,7 +340,7 @@ public class BUAS {
         mainTextArea.setText("Kamu berada di sebuah Pintu Gerbang . \nSeorang Pria tua menjaga pintu itu \n\nApa yang akan kamu lakukan?");
         choice1.setText("Bicara pada Penjaga");
         choice2.setText("Pukul Penjaga");
-        choice3.setText("Bicara pada Seorang Perempuan");
+        choice3.setText("Bicara pada Perempuan");
         choice4.setText("Pergi");
 
     }
@@ -325,7 +394,7 @@ public class BUAS {
         image = new ImageIcon(".//res//img//crossroads.jpg");
         imageLabel.setIcon(image);
         position = "persimpangan";
-        mainTextArea.setText("Kamu berada di persimpangan jalan.\n Kemanakah kamu akan pergi?.");
+        mainTextArea.setText("Kamu berada di persimpangan jalan.\nKemanakah kamu akan pergi?");
         choice1.setText("Pergi ke Utara");
         choice2.setText("Pergi ke Timur");
         choice3.setText("Pergi ke Selatan");
@@ -338,9 +407,19 @@ public class BUAS {
         imageLabel.setIcon(image);
 
         position = "utara";
-        mainTextArea.setText("Kamu berada di Sungai. \nKamu menangkap ikan yang berenang di sungai\n Karena terlihat lezat kamu memakannya.\n(HP kamu bertambah 2 setelah memakan ikan)");
-        playerHP = playerHP + 2;
-        hpLabelNumber.setText("" + playerHP);
+
+        int slotNumber = 0;
+        while(playerItem[slotNumber] != "" && slotNumber <4){
+            slotNumber++;
+        }
+        if(playerItem[slotNumber] == ""){
+            mainTextArea.setText("Kamu berada di Sungai. \nKamu menangkap ikan yang berenang di sungai\nKamu masukkan ikan ke dalam inventory.");
+            playerItem[slotNumber] = "Ikan";
+        }
+        else if(playerItem[slotNumber] != ""){
+            mainTextArea.setText("Kamu berada di Sungai. \nKamu menangkap ikan yang berenang di sungai\nInventorymu tidak cukup untuk menampung barang lagi.");
+        }
+
         choice1.setText("Pergi ke Selatan");
         choice2.setText("");
         choice3.setText("");
@@ -349,12 +428,38 @@ public class BUAS {
     }
 
     public static void timur() {
-        image = new ImageIcon(".//res//img//sword.png");
+        image = new ImageIcon(".//res//img//cave.jpg");
         imageLabel.setIcon(image);
         position = "timur";
-        mainTextArea.setText("Kamu berjalan di suatu tempat yang mengerikan.\n Kamu menemukan prajurit yang sudah tidak bernyawa\nKamu melihat pedang dan mengambilnya.\n(Kamu mendapatkan Pedang)");
-        weapon = "Pedang";
-        weaponLabelName.setText(weapon);
+
+
+        mainTextArea.setText("Kamu tiba di suatu tempat yang mengerikan.\nKamu menemukan prajurit yang sudah tidak bernyawa\nKamu melihat sebuah pedang.");
+        choice1.setText("Pergi ke Barat");
+        choice2.setText("Ambil Pedang");
+        choice3.setText("");
+        choice4.setText("");
+    }
+
+    public static void ambilPedang(){
+        image = new ImageIcon(".//res//img//sword.png");
+        imageLabel.setIcon(image);
+        position = "ambil pedang";
+
+        int slotNumber = 0;
+        while(playerItem[slotNumber] != "" && slotNumber <4){
+            slotNumber++;
+        }
+        if(playerItem[slotNumber] == "Pedang" || weapon == "Pedang"){
+            mainTextArea.setText("Kamu sudah punya Pedang.");
+        }
+        else if(playerItem[slotNumber] == ""){
+            mainTextArea.setText("Kamu mengambil Pedang.");
+            playerItem[slotNumber] = "Pedang";
+        }
+        else if(playerItem[slotNumber] != ""){
+            mainTextArea.setText("Kamu tidak bisa mengambil Pedang.\nInventory penuh");
+        }
+
         choice1.setText("Pergi ke Barat");
         choice2.setText("");
         choice3.setText("");
@@ -485,6 +590,38 @@ public class BUAS {
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
+    }
+
+    public static void itemUsed(int slotNumber){
+        switch (playerItem[slotNumber]){
+            case "Jamu":
+                playerHP = playerHP + 10;
+                hpLabelNumber.setText("" + playerHP);
+                playerItem[slotNumber] = "";
+                break;
+            case "Jeruk":
+                playerHP = playerHP + 3;
+                hpLabelNumber.setText("" + playerHP);
+                playerItem[slotNumber] = "";
+                break;
+            case "Ikan":
+                playerHP = playerHP + 7;
+                hpLabelNumber.setText("" + playerHP);
+                playerItem[slotNumber] = "";
+                break;
+            case "Pedang":
+                weapon = "Pedang";
+                weaponLabelName.setText(weapon);
+                playerItem[slotNumber] = "Pisau";
+                break;
+            case "Pisau":
+                weapon = "Pisau";
+                weaponLabelName.setText(weapon);
+                playerItem[slotNumber] = "Pedang";
+                break;
+            case "":
+                break;
+        }
     }
 
 }
