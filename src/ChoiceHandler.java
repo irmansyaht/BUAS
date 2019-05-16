@@ -1,8 +1,17 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Kelas Handler untuk Pilihan Dalam Game BUAS
+ * @author Irmansyah Turhamun, Dhio Makarim Utomo, Rizky Nurfaizi, M Haqy Aunoora
+ *
+ * @version 1.0 (Stable for Demo)
+ * */
 public class ChoiceHandler implements ActionListener {
 
+    /**
+     * Handler Event di dalam game
+     * @param event Merupakan pilihan event yang sedang berlangsung di dalam game
+     */
     public void actionPerformed(ActionEvent event){
 
         String yourChoice = event.getActionCommand();

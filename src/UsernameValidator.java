@@ -1,6 +1,11 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/**
+ * Kelas untuk memvalidasi Username Dalam Game BUAS
+ * @author Irmansyah Turhamun, Dhio Makarim Utomo, Rizky Nurfaizi, M Haqy Aunoora
+ *
+ * @version 1.0 (Stable for Demo)
+ * */
 public class UsernameValidator{
 
     private Pattern pattern;

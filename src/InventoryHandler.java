@@ -1,7 +1,16 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Kelas Handler untuk Inventory Dalam Game BUAS
+ * @author Irmansyah Turhamun, Dhio Makarim Utomo, Rizky Nurfaizi, M Haqy Aunoora
+ *
+ * @version 1.0 (Stable for Demo)
+ * */
 public class InventoryHandler implements ActionListener {
+    /**
+     * Method Handler untuk menggunakan barang di dalam inventory game
+     * @param event
+     */
     public void actionPerformed(ActionEvent event){
         String yourChoice = event.getActionCommand();
         switch (yourChoice){
