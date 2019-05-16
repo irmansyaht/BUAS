@@ -33,7 +33,7 @@ public class BUAS {
     JLabel titleNameLabel;
     JLabel titleNameLabel1;
     static JLabel imageLabel;
-    static JLabel hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
+    static JLabel nameLabel, nameLabelValue, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     static Font normalFont = new Font("Times New Roman", Font.PLAIN, 24);
     JButton startButton, continueButton;
@@ -42,10 +42,14 @@ public class BUAS {
                     itemButton1, itemButton2, itemButton3, itemButton4, itemButton5;
     static JTextArea mainTextArea;
     static int playerHP, monsterHP, silverRing;
-    static String weapon, position, inventoryStatus, clickedButton;
+    static String playerName="", weapon, position, inventoryStatus, clickedButton;
     static Monster monster;
     static ImageIcon image;
 
+    static JPanel newPlayerPanel, newmainTextPanel;
+    static JTextArea newmainTextArea;
+    static JButton newPlayerButton;
+    static JTextField textField1;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     static ChoiceHandler choiceHandler = new ChoiceHandler();
@@ -140,6 +144,12 @@ public class BUAS {
 
     public static void createGameScreen(String choice) {
 
+        if(newmainTextPanel != null)
+            newmainTextPanel.setVisible(false);
+        if(newmainTextArea != null)
+            newmainTextArea.setVisible(false);
+        if(newPlayerPanel != null)
+            newPlayerPanel.setVisible(false);
         titleNamePanel.setVisible(false);
         titleNamePanel1.setVisible(false);
         startButtonPanel.setVisible(false);
@@ -255,10 +265,18 @@ public class BUAS {
         inventoryPanel.setVisible(false);
 
         playerPanel = new JPanel();
-        playerPanel.setBounds(600, 100, 270, 50);
+        playerPanel.setBounds(600, 100, 370, 100);
         playerPanel.setBackground(Color.black);
         playerPanel.setLayout(new GridLayout(2, 2));
         con.add(playerPanel);
+        nameLabel = new JLabel("Nama:");
+        nameLabel.setFont(normalFont);
+        nameLabel.setForeground(Color.white);
+        playerPanel.add(nameLabel);
+        nameLabelValue = new JLabel();
+        nameLabelValue.setFont(normalFont);
+        nameLabelValue.setForeground(Color.white);
+        playerPanel.add(nameLabelValue);
         hpLabel = new JLabel("HP:");
         hpLabel.setFont(normalFont);
         hpLabel.setForeground(Color.white);
@@ -295,10 +313,52 @@ public class BUAS {
         }
     }
 
+    public static void newGameScreen(String choice) {
+
+        titleNamePanel.setVisible(true);
+        titleNamePanel1.setVisible(false);
+        startButtonPanel.setVisible(false);
+        musicPanel.setVisible(false);
+        newmainTextPanel = new JPanel();
+        newmainTextPanel.setBounds(50, 350, 430, 250);
+        newmainTextPanel.setBackground(Color.black);
+        con.add(newmainTextPanel);
+
+        newmainTextArea = new JTextArea("Masukkan Nama");
+        newmainTextArea.setBounds(50, 350, 430, 250);
+        newmainTextArea.setBackground(Color.black);
+        newmainTextArea.setForeground(Color.white);
+        newmainTextArea.setFont(normalFont);
+        newmainTextArea.setLineWrap(true);
+        newmainTextPanel.add(newmainTextArea);
+
+        newPlayerPanel = new JPanel();
+        newPlayerPanel.setBounds(500, 350, 250, 150);
+        newPlayerPanel.setBackground(Color.black);
+        newPlayerPanel.setLayout(new GridLayout(4, 1));
+        con.add(newPlayerPanel);
+
+        textField1 = new JTextField();
+        newPlayerPanel.add(textField1);
+        newPlayerButton = new JButton("GO");
+        newPlayerButton.setBackground(Color.black);
+        newPlayerButton.setForeground(Color.white);
+        newPlayerButton.setFont(normalFont);
+        newPlayerButton.setFocusPainted(false);
+        newPlayerButton.addActionListener(choiceHandler);
+        newPlayerButton.setActionCommand("c1");
+        newPlayerPanel.add(newPlayerButton);
+
+        position = "newPlayer";
+        newmainTextArea.setText("Masukkan nama");
+        newPlayerButton.setText("GO");
+    }
+
     public static void playerSetup() {
         playerHP = 15;
         monsterHP = 20;
         weapon = "Pisau";
+        nameLabelValue.setText(playerName);
         weaponLabelName.setText(weapon);
         hpLabelNumber.setText("" + playerHP);
         inventoryStatus = "close";
@@ -312,10 +372,32 @@ public class BUAS {
         pintuGerbang();
     }
 
+    public static void saveData() {
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter("savefile.txt"));
+            bw.write(""+playerName);
+            bw.newLine();
+            bw.write(""+playerHP);
+            bw.newLine();
+            bw.write(""+monsterHP);
+            bw.newLine();
+            bw.write(weapon);
+            bw.close();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        nameLabelValue.setText(playerName);
+        hpLabelNumber.setText(""+playerHP);
+        weaponLabelName.setText(weapon);
+    }
+
     public static void loadData() {
         try {
             BufferedReader br = new BufferedReader(new FileReader("savefile.txt"));
 
+            playerName = br.readLine();
             playerHP = Integer.parseInt(br.readLine());
             monsterHP = Integer.parseInt(br.readLine());
             weapon = br.readLine();
@@ -326,6 +408,7 @@ public class BUAS {
 
         }
 
+        nameLabelValue.setText(playerName);
         weaponLabelName.setText(weapon);
         hpLabelNumber.setText("" + playerHP);
 
@@ -367,27 +450,13 @@ public class BUAS {
 
     public static void bicaraPerempuan() {
         position = "bicara perempuan";
-        mainTextArea.setText("Perempuan:\nHalo, dengan berbicara dengan saya kamu dapat menyimpan progress game.");
+        mainTextArea.setText("Perempuan:\nHalo, dengan berbicara dengan saya kamu sudah menyimpan progress game.");
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
 
-        try {
-            BufferedWriter bw = new BufferedWriter(new FileWriter("savefile.txt"));
-            bw.write(""+playerHP);
-            bw.newLine();
-            bw.write(""+monsterHP);
-            bw.newLine();
-            bw.write(weapon);
-            bw.close();
-        }
-        catch(Exception e) {
-
-        }
-
-        hpLabelNumber.setText(""+playerHP);
-        weaponLabelName.setText(weapon);
+        saveData();
     }
 
     public static void persimpangan() {

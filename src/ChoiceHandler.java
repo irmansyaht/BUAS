@@ -8,6 +8,17 @@ public class ChoiceHandler implements ActionListener {
         String yourChoice = event.getActionCommand();
 
         switch(BUAS.position){
+            case "newPlayer":
+                switch(yourChoice){
+                    case "c1":
+                        String username = BUAS.textField1.getText();
+                        if(!username.equals("")) {
+                            BUAS.playerName = username;
+                            BUAS.createGameScreen("mulai");
+                        }
+                        break;
+                }
+                break;
             case "pintuGerbang":
                 switch(yourChoice){
                     case "c1":

@@ -6,7 +6,7 @@ public class TitleScreenHandler implements ActionListener {
     public void actionPerformed(ActionEvent event){
         String yourChoice = event.getActionCommand();
         if(yourChoice.equals("mulai")) {
-            BUAS.createGameScreen("mulai");
+            BUAS.newGameScreen("mulai");
         }
         else if(yourChoice.equals("lanjutkan")) {
             BUAS.createGameScreen("lanjutkan");
