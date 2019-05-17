@@ -1,7 +1,4 @@
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,6 +22,12 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Kelas Utama Dalam Game BUAS
+ * @author Irmansyah Turhamun, Dhio Makarim Utomo, Rizky Nurfaizi, M Haqy Aunoora
+ *
+ * @version 1.0 (Stable for Demo)
+ * */
 public class BUAS {
 
     JFrame window;
@@ -33,19 +36,23 @@ public class BUAS {
     JLabel titleNameLabel;
     JLabel titleNameLabel1;
     static JLabel imageLabel;
-    static JLabel hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
+    static JLabel nameLabel, nameLabelValue, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
-    static Font normalFont = new Font("Times New Roman", Font.PLAIN, 24);
+    static Font normalFont = new Font("Times New Roman", Font.PLAIN, 20);
     JButton startButton, continueButton;
     static JButton musicButton;
     static JButton choice1, choice2, choice3, choice4, inventoryButton,
                     itemButton1, itemButton2, itemButton3, itemButton4, itemButton5;
     static JTextArea mainTextArea;
     static int playerHP, monsterHP, silverRing;
-    static String weapon, position, inventoryStatus, clickedButton;
+    static String playerName="", weapon, position, inventoryStatus, clickedButton;
     static Monster monster;
     static ImageIcon image;
 
+    static JPanel newPlayerPanel, newmainTextPanel;
+    static JTextArea newmainTextArea;
+    static JButton newPlayerButton;
+    static JTextField textField1;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     static ChoiceHandler choiceHandler = new ChoiceHandler();
@@ -54,7 +61,13 @@ public class BUAS {
 
     static String[] playerItem = new String[5];
 
+    ImageIcon logo = new ImageIcon(".//res//img//images.png");
+    Image icon = logo.getImage();
 
+    /**
+     * @param args Method utama untuk menjalankan game;
+     *
+     */
     public static void main(String[] args) {
 
         new BUAS();
@@ -62,19 +75,13 @@ public class BUAS {
 
     public BUAS() {
 
-        //TAMBAH CLASS
-        //- Monster
-        //- Character
-        //- Items
-        //- BGM/SFX
-        //- Merchant
-        //- Combat
-
         window = new JFrame();
         window.setSize(1000, 650);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
+        window.setIconImage(icon);
+        window.setTitle("BUAS - Battle of UAS");
         con = window.getContentPane();
 
         titleNamePanel = new JPanel();
@@ -138,8 +145,18 @@ public class BUAS {
         window.setVisible(true);
     }
 
+    /**
+     * Kelas untuk memulai Game
+     * @param choice untuk mengambil pilihan untuk memulai atau mengambil file untuk progress yang sudah ada.
+     */
     public static void createGameScreen(String choice) {
 
+        if(newmainTextPanel != null)
+            newmainTextPanel.setVisible(false);
+        if(newmainTextArea != null)
+            newmainTextArea.setVisible(false);
+        if(newPlayerPanel != null)
+            newPlayerPanel.setVisible(false);
         titleNamePanel.setVisible(false);
         titleNamePanel1.setVisible(false);
         startButtonPanel.setVisible(false);
@@ -161,8 +178,8 @@ public class BUAS {
         choiceButtonPanel.setBounds(500, 350, 270, 180);
         choiceButtonPanel.setBackground(Color.black);
         choiceButtonPanel.setLayout(new GridLayout(5, 1));
-        con.add(choiceButtonPanel);
 
+        con.add(choiceButtonPanel);
         choice1 = new JButton("Pilihan 1");
         choice1.setBackground(Color.black);
         choice1.setForeground(Color.white);
@@ -255,10 +272,18 @@ public class BUAS {
         inventoryPanel.setVisible(false);
 
         playerPanel = new JPanel();
-        playerPanel.setBounds(600, 100, 270, 50);
+        playerPanel.setBounds(600, 100, 370, 100);
         playerPanel.setBackground(Color.black);
-        playerPanel.setLayout(new GridLayout(2, 2));
+        playerPanel.setLayout(new GridLayout(3, 2));
         con.add(playerPanel);
+        nameLabel = new JLabel("Nama:");
+        nameLabel.setFont(normalFont);
+        nameLabel.setForeground(Color.white);
+        playerPanel.add(nameLabel);
+        nameLabelValue = new JLabel();
+        nameLabelValue.setFont(normalFont);
+        nameLabelValue.setForeground(Color.white);
+        playerPanel.add(nameLabelValue);
         hpLabel = new JLabel("HP:");
         hpLabel.setFont(normalFont);
         hpLabel.setForeground(Color.white);
@@ -295,16 +320,65 @@ public class BUAS {
         }
     }
 
+    /**
+     * Method untuk membuat game baru
+     * @param choice merupakan parameter pilihan untuk memulai game baru
+     */
+    public static void newGameScreen(String choice) {
+
+        titleNamePanel.setVisible(true);
+        titleNamePanel1.setVisible(false);
+        startButtonPanel.setVisible(false);
+        musicPanel.setVisible(false);
+        newmainTextPanel = new JPanel();
+        newmainTextPanel.setBounds(50, 350, 430, 250);
+        newmainTextPanel.setBackground(Color.black);
+        con.add(newmainTextPanel);
+
+        newmainTextArea = new JTextArea("Masukkan Nama");
+        newmainTextArea.setBounds(50, 350, 430, 250);
+        newmainTextArea.setBackground(Color.black);
+        newmainTextArea.setForeground(Color.white);
+        newmainTextArea.setFont(normalFont);
+        newmainTextArea.setLineWrap(true);
+        newmainTextPanel.add(newmainTextArea);
+
+        newPlayerPanel = new JPanel();
+        newPlayerPanel.setBounds(500, 350, 250, 150);
+        newPlayerPanel.setBackground(Color.black);
+        newPlayerPanel.setLayout(new GridLayout(4, 1));
+        con.add(newPlayerPanel);
+
+        textField1 = new JTextField();
+        newPlayerPanel.add(textField1);
+        newPlayerButton = new JButton("Lanjut");
+        newPlayerButton.setBackground(Color.black);
+        newPlayerButton.setForeground(Color.white);
+        newPlayerButton.setFont(normalFont);
+        newPlayerButton.setFocusPainted(false);
+        newPlayerButton.addActionListener(choiceHandler);
+        newPlayerButton.setActionCommand("c1");
+        newPlayerPanel.add(newPlayerButton);
+
+        position = "newPlayer";
+        newmainTextArea.setText("Masukkan nama");
+        newPlayerButton.setText("Lanjut");
+    }
+
+    /**
+     * Method untuk menyiapkan informasi status pemain baru
+     */
     public static void playerSetup() {
         playerHP = 15;
         monsterHP = 20;
-        weapon = "Pisau";
+        weapon = Item.pisau.toString();
+        nameLabelValue.setText(playerName);
         weaponLabelName.setText(weapon);
         hpLabelNumber.setText("" + playerHP);
         inventoryStatus = "close";
 
-        playerItem[0] = "Jamu";
-        playerItem[1] = "Jeruk";
+        playerItem[0] = Item.jamu.toString();
+        playerItem[1] = Item.jeruk.toString();
         playerItem[2] = "";
         playerItem[3] = "";
         playerItem[4] = "";
@@ -312,10 +386,38 @@ public class BUAS {
         pintuGerbang();
     }
 
+    /**
+     * Method untuk menyimpan data permainan kedalam file savefile.txt
+     */
+    public static void saveData() {
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter("savefile.txt"));
+            bw.write(""+playerName);
+            bw.newLine();
+            bw.write(""+playerHP);
+            bw.newLine();
+            bw.write(""+monsterHP);
+            bw.newLine();
+            bw.write(weapon);
+            bw.close();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        nameLabelValue.setText(playerName);
+        hpLabelNumber.setText(""+playerHP);
+        weaponLabelName.setText(weapon);
+    }
+
+    /**
+     * Method untuk memuat data yang telah disimpan
+     */
     public static void loadData() {
         try {
             BufferedReader br = new BufferedReader(new FileReader("savefile.txt"));
 
+            playerName = br.readLine();
             playerHP = Integer.parseInt(br.readLine());
             monsterHP = Integer.parseInt(br.readLine());
             weapon = br.readLine();
@@ -326,37 +428,51 @@ public class BUAS {
 
         }
 
+        nameLabelValue.setText(playerName);
         weaponLabelName.setText(weapon);
         hpLabelNumber.setText("" + playerHP);
 
         pintuGerbang();
     }
 
+    /**
+     * Method untuk jalan cerita pada posisi Map Pintu Gerbang
+     */
     public static void pintuGerbang() {
         image = new ImageIcon(".//res//img//gate.jpg");
         imageLabel.setIcon(image);
 
         position = "pintuGerbang";
-        mainTextArea.setText("Kamu berada di sebuah Pintu Gerbang . \nSeorang Pria tua menjaga pintu itu \n\nApa yang akan kamu lakukan?");
+        mainTextArea.setText("Kamu berada di sebuah Pintu Gerbang.\nSeorang Pria tua menjaga pintu itu \n\nApa yang akan kamu lakukan?");
         choice1.setText("Bicara pada Penjaga");
         choice2.setText("Pukul Penjaga");
-        choice3.setText("Bicara pada Perempuan");
+        choice3.setText("Penginapan");
         choice4.setText("Pergi");
 
     }
 
+    /**
+     * Method untuk berbicara kepada penjaga sebagai jalan cerita dari Game
+     */
     public static void bicara() {
         position = "bicara";
-        mainTextArea.setText("Penjaga:\nCincin Perak kerajaan Dicuri oleh Seorang Monster BUAS. Cepat ambil kembali Cincin Perak kami dari Monster BUAS itu.");
+        mainTextArea.setText("Penjaga:\nCincin Perak kerajaan Dicuri oleh Seorang Monster BUAS.Cepat ambil kembali Cincin Perak kami dari Monster BUAS itu.");
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
     }
 
+    /**
+     * Method untuk melakukan aksi tidak terpuji seperti memukul penjaga
+     */
     public static void pukulPenjaga() {
         position = "pukul penjaga";
-        mainTextArea.setText("Penjaga:\n Dasar orang aneh masih berani kamu ngelawan orang tua\nPenjaga tersebut kemudian menjewer kuping anda.\n(Kamu menerima 3 kerusakan)");
+<<<<<<< HEAD
+        mainTextArea.setText("Penjaga:\nDasar orang aneh masih berani kamu melawanku.\nPenjaga tersebut kemudian menjewer kuping anda.\n(Kamu menerima 3 kerusakan)");
+=======
+        mainTextArea.setText("Penjaga:\n Dasar orang aneh masih berani kamu melawanku.\nPenjaga tersebut kemudian menjewer kuping anda.\n(Kamu menerima 3 kerusakan)");
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
         playerHP = playerHP - 3;
         hpLabelNumber.setText("" + playerHP);
         choice1.setText(">");
@@ -365,31 +481,27 @@ public class BUAS {
         choice4.setText("");
     }
 
+    /**
+     * Method untuk pilihan penginapan dan menyimpan data pada game
+     */
     public static void bicaraPerempuan() {
         position = "bicara perempuan";
-        mainTextArea.setText("Perempuan:\nHalo, dengan berbicara dengan saya kamu dapat menyimpan progress game.");
+<<<<<<< HEAD
+        mainTextArea.setText("Perempuan:\nHalo, Jika " + playerName + " datang kemari data kamu aman.");
+=======
+        mainTextArea.setText("Perempuan:\nHalo,Jika "+playerName+" datang kemari data kamu aman.");
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
 
-        try {
-            BufferedWriter bw = new BufferedWriter(new FileWriter("savefile.txt"));
-            bw.write(""+playerHP);
-            bw.newLine();
-            bw.write(""+monsterHP);
-            bw.newLine();
-            bw.write(weapon);
-            bw.close();
-        }
-        catch(Exception e) {
-
-        }
-
-        hpLabelNumber.setText(""+playerHP);
-        weaponLabelName.setText(weapon);
+        saveData();
     }
 
+    /**
+     * Method untuk posisi Map di persimpangan jalan sebagai alur cerita dalam Game
+     */
     public static void persimpangan() {
         image = new ImageIcon(".//res//img//crossroads.jpg");
         imageLabel.setIcon(image);
@@ -402,6 +514,9 @@ public class BUAS {
 
     }
 
+    /**
+     * Method untuk posisi Map di Utara (Sungai) sebagai bagian dari cerita game
+     */
     public static void utara() {
         image = new ImageIcon(".//res//img//river.jpg");
         imageLabel.setIcon(image);
@@ -414,7 +529,7 @@ public class BUAS {
         }
         if(playerItem[slotNumber] == ""){
             mainTextArea.setText("Kamu berada di Sungai. \nKamu menangkap ikan yang berenang di sungai\nKamu masukkan ikan ke dalam inventory.");
-            playerItem[slotNumber] = "Ikan";
+            playerItem[slotNumber] = Item.ikan.toString();
         }
         else if(playerItem[slotNumber] != ""){
             mainTextArea.setText("Kamu berada di Sungai. \nKamu menangkap ikan yang berenang di sungai\nInventorymu tidak cukup untuk menampung barang lagi.");
@@ -427,6 +542,9 @@ public class BUAS {
 
     }
 
+    /**
+     * Method untuk posisi map di timur (Gua) sebagai alur cerita dalam Game
+     */
     public static void timur() {
         image = new ImageIcon(".//res//img//cave.jpg");
         imageLabel.setIcon(image);
@@ -440,6 +558,9 @@ public class BUAS {
         choice4.setText("");
     }
 
+    /**
+     * Method untuk mengambil pedang sebagai senjata dalam game
+     */
     public static void ambilPedang(){
         image = new ImageIcon(".//res//img//sword.png");
         imageLabel.setIcon(image);
@@ -449,15 +570,15 @@ public class BUAS {
         while(playerItem[slotNumber] != "" && slotNumber <4){
             slotNumber++;
         }
-        if(playerItem[slotNumber] == "Pedang" || weapon == "Pedang"){
+        if(playerItem[slotNumber] == Item.pedang.toString() || weapon == Item.pedang.toString()){
             mainTextArea.setText("Kamu sudah punya Pedang.");
         }
         else if(playerItem[slotNumber] == ""){
             mainTextArea.setText("Kamu mengambil Pedang.");
-            playerItem[slotNumber] = "Pedang";
+            playerItem[slotNumber] = Item.pedang.toString();
         }
         else if(playerItem[slotNumber] != ""){
-            mainTextArea.setText("Kamu tidak bisa mengambil Pedang.\nInventory penuh");
+            mainTextArea.setText("Kamu tidak bisa mengambil Pedang.\nInventory penuh.");
         }
 
         choice1.setText("Pergi ke Barat");
@@ -466,6 +587,9 @@ public class BUAS {
         choice4.setText("");
     }
 
+    /**
+     * Method untuk posisi map Barat dan bertarung melawan Monster BUAS
+     */
     public static void barat() {
 
         int i = new java.util.Random().nextInt(100)+1;
@@ -492,7 +616,7 @@ public class BUAS {
         }
 
         position = "barat";
-        mainTextArea.setText("Saat kamu berjalan ke hutan Kamu bertemu dengan Monster BUAS " + monster.name + "!\n Apa yang akan kamu lakukan?");
+        mainTextArea.setText("Saat kamu berjalan ke hutan Kamu bertemu dengan Monster BUAS " + monster.name + "!\nApa yang akan kamu lakukan?");
         choice1.setText("Bertarung");
         choice2.setText("Pergi ke Timur");
         choice3.setText("");
@@ -500,6 +624,9 @@ public class BUAS {
 
     }
 
+    /**
+     * Method untuk bertarung melawan monster sebagai bagian dari Alur Game
+     */
     public static void bertarung() {
         position = "bertarung";
         mainTextArea.setText("HP " + monster.name + ": " + monster.hp + "\n\nApa yang kamu lakukan?");
@@ -509,14 +636,17 @@ public class BUAS {
         choice4.setText("");
     }
 
+    /**
+     * Method untuk melakukan serangan kepada monster
+     */
     public static void playerAttack() {
         position = "playerAttack";
 
         int playerDamage = 0;
 
-        if (weapon.equals("Pisau")) {
+        if (weapon.equals(Item.pisau.toString())) {
             playerDamage = new java.util.Random().nextInt(3);
-        } else if (weapon.equals("Pedang")) {
+        } else if (weapon.equals(Item.pedang.toString())) {
             playerDamage = new java.util.Random().nextInt(12);
         }
 
@@ -529,6 +659,9 @@ public class BUAS {
         choice4.setText("");
     }
 
+    /**
+     * Method untuk monster BUAS melakukan serangan kepada pemain
+     */
     public static void monsterAttack() {
         position = "monsterAttack";
 
@@ -548,6 +681,9 @@ public class BUAS {
 
     }
 
+    /**
+     * Method untuk kondisi menang melawan Monster BUAS
+     */
     public static void win() {
         position = "win";
 
@@ -562,36 +698,46 @@ public class BUAS {
 
     }
 
+    /**
+     * Method Bad Ending ketika pemain utama kalah dari monster
+     */
     public static void lose() {
         position = "lose";
 
-        mainTextArea.setText("Kamu terluka cukup parah dan meninggal terbunuh Monster\n\n");
+        mainTextArea.setText("Kamu terbunuh oleh Monster\n\n");
 
-        choice1.setText("");
+        choice1.setText("Halaman Awal");
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
-        choice1.setVisible(false);
+        choice1.setVisible(true);
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
     }
 
+    /**
+     * Method untuk akhir cerita dari Game
+     */
     public static void ending() {
         position = "ending";
 
-        mainTextArea.setText("Penjaga: Oh bagus nak kamu menemukan cincin kerajaan.\nTerima kasih sekarang kami mengakuimu.\n");
+        mainTextArea.setText("Penjaga: Oh bagus, "+playerName+" kamu menemukan cincin tersebut.\nTerima kasih sekarang kami mengakuimu.\n");
 
-        choice1.setText("");
+        choice1.setText("Halaman Awal");
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
-        choice1.setVisible(false);
+        choice1.setVisible(true);
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
     }
 
+    /**
+     * Method untuk menggunakan barang di dalam Inventory Game
+     * @param slotNumber merupakan urutan dari Inventory yang dibawa oleh pemain
+     */
     public static void itemUsed(int slotNumber){
         switch (playerItem[slotNumber]){
             case "Jamu":
@@ -612,16 +758,17 @@ public class BUAS {
             case "Pedang":
                 weapon = "Pedang";
                 weaponLabelName.setText(weapon);
-                playerItem[slotNumber] = "Pisau";
+                playerItem[slotNumber] =Item.pisau.toString();
                 break;
             case "Pisau":
                 weapon = "Pisau";
                 weaponLabelName.setText(weapon);
-                playerItem[slotNumber] = "Pedang";
+                playerItem[slotNumber] = Item.pedang.toString();
                 break;
             case "":
                 break;
         }
+
     }
 
 }

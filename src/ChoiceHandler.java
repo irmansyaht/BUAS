@@ -1,13 +1,34 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * Kelas Handler untuk Pilihan Dalam Game BUAS
+ * @author Irmansyah Turhamun, Dhio Makarim Utomo, Rizky Nurfaizi, M Haqy Aunoora
+ *
+ * @version 1.0 (Stable for Demo)
+ * */
 public class ChoiceHandler implements ActionListener {
 
+    /**
+     * Handler Event di dalam game
+     * @param event Merupakan pilihan event yang sedang berlangsung di dalam game
+     */
     public void actionPerformed(ActionEvent event){
 
         String yourChoice = event.getActionCommand();
 
         switch(BUAS.position){
+            case "newPlayer":
+                switch(yourChoice){
+                    case "c1":
+                        String username = BUAS.textField1.getText();
+                        UsernameValidator usernameValidator = new UsernameValidator();
+                        if(usernameValidator.validate(username)== true) {
+                            BUAS.playerName = username;
+                            BUAS.createGameScreen("mulai");
+                        }
+                        break;
+                }
+                break;
             case "pintuGerbang":
                 switch(yourChoice){
                     case "c1":
@@ -207,6 +228,20 @@ public class ChoiceHandler implements ActionListener {
                 }
                 break;
 
+            case "ending":
+                switch (yourChoice){
+                    case "c1":
+                        String[]args = {};
+                        BUAS.main(args);
+                }
+                break;
+            case "lose":
+                switch (yourChoice){
+                    case "c1":
+                        String[]args = {};
+                        BUAS.main(args);
+                }
+                break;
         }
 
 

@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8de3e8c0-7ebc-4920-8137-e291ff738fcd" name="Default Changelist" comment="" />
+    <list default="true" id="8de3e8c0-7ebc-4920-8137-e291ff738fcd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BUAS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BUAS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChoiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChoiceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventoryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster_Demon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster_Demon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster_Gandalf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster_Gandalf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster_Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster_Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster_Slime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster_Slime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SoundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TitleScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TitleScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UsernameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UsernameValidator.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,26 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BUAS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="430" column="52" selection-start-line="430" selection-start-column="52" selection-end-line="430" selection-end-column="52" />
+<<<<<<< HEAD
+            <state relative-caret-position="-4464">
+              <caret line="470" column="40" selection-start-line="470" selection-start-column="40" selection-end-line="470" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InventoryHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+=======
+            <state relative-caret-position="34">
+              <caret line="24" selection-start-line="24" selection-end-line="29" selection-end-column="5" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
             </state>
           </provider>
         </entry>
@@ -41,8 +49,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SoundHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+<<<<<<< HEAD
+            <state relative-caret-position="289">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+=======
+            <state relative-caret-position="119">
+              <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,13 +64,51 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChoiceHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/TitleScreenHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="120" column="40" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="40" />
+<<<<<<< HEAD
+            <state relative-caret-position="340">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+=======
+            <state relative-caret-position="204">
+              <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TitleScreenHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UsernameValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Monster_Slime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+<<<<<<< HEAD
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+=======
+              <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
             </state>
           </provider>
         </entry>
@@ -68,6 +119,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -83,6 +135,10 @@
       <find>pisau</find>
       <find>pedang</find>
       <find>weapon</find>
+      <find>cinci</find>
+      <find>newG</find>
+      <find>newGam</find>
+      <find>lose</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,28 +148,44 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Game.java" />
-        <option value="$PROJECT_DIR$/src/TitleScreenHandler.java" />
         <option value="$PROJECT_DIR$/src/GoSound.java" />
         <option value="$PROJECT_DIR$/src/AttackSound.java" />
         <option value="$PROJECT_DIR$/src/ButtonHandler.java" />
         <option value="$PROJECT_DIR$/src/Music.java" />
         <option value="$PROJECT_DIR$/src/TalkSound.java" />
-        <option value="$PROJECT_DIR$/src/SoundHandler.java" />
-        <option value="$PROJECT_DIR$/src/Sound.java" />
-        <option value="$PROJECT_DIR$/src/Monster.java" />
-        <option value="$PROJECT_DIR$/src/Monster_Gandalf.java" />
-        <option value="$PROJECT_DIR$/src/Monster_Slime.java" />
-        <option value="$PROJECT_DIR$/src/Monster_Goblin.java" />
-        <option value="$PROJECT_DIR$/src/InventoryHandler.java" />
+        <option value="$PROJECT_DIR$/src/UserNameValidator.java" />
+<<<<<<< HEAD
+=======
         <option value="$PROJECT_DIR$/src/BUAS.java" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
         <option value="$PROJECT_DIR$/src/ChoiceHandler.java" />
+        <option value="$PROJECT_DIR$/src/InventoryHandler.java" />
+        <option value="$PROJECT_DIR$/src/Item.java" />
+        <option value="$PROJECT_DIR$/src/Monster.java" />
+        <option value="$PROJECT_DIR$/src/Monster_Demon.java" />
+        <option value="$PROJECT_DIR$/src/Monster_Gandalf.java" />
+        <option value="$PROJECT_DIR$/src/Monster_Goblin.java" />
+        <option value="$PROJECT_DIR$/src/Monster_Slime.java" />
+        <option value="$PROJECT_DIR$/src/Sound.java" />
+        <option value="$PROJECT_DIR$/src/SoundHandler.java" />
+        <option value="$PROJECT_DIR$/src/TitleScreenHandler.java" />
+        <option value="$PROJECT_DIR$/src/UsernameValidator.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/BUAS.java" />
+=======
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1022" />
-    <option name="height" value="1067" />
+  <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
+    <option name="x" value="675" />
+    <option name="width" value="698" />
+=======
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -121,7 +193,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,12 +217,6 @@
             <path>
               <item name="BUAS" type="b2602c69:ProjectViewProjectNode" />
               <item name="BUAS" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="sfx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BUAS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BUAS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -160,12 +228,20 @@
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
+            <path>
+              <item name="BUAS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="java.base" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+<<<<<<< HEAD
       <pane id="Course" />
+=======
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,17 +318,31 @@
       <workItem from="1557717874318" duration="990000" />
       <workItem from="1557969860588" duration="793000" />
       <workItem from="1557980579887" duration="9956000" />
+      <workItem from="1558009623558" duration="9117000" />
+<<<<<<< HEAD
+      <workItem from="1558056055021" duration="1306000" />
+=======
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35440000" />
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="45863000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="817" height="853" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20343462" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.152349" />
+=======
+    <option name="totallyTimeSpent" value="44557000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1505295" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -261,7 +351,11 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33841887" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33646113" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3371522" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -270,9 +364,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.33387887" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32405892" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -284,32 +378,36 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="UI Designer" order="1" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.120272316" />
-      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="5" />
-      <window_info anchor="bottom" id="Messages" order="6" weight="0.3289689" />
-      <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Database" order="1" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1505295" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3371522" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.33387887" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32405892" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,43 +460,8 @@
     <entry file="file://$PROJECT_DIR$/src/Music.java" />
     <entry file="file://$PROJECT_DIR$/src/ButtonHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/TalkSound.java" />
-    <entry file="file://$PROJECT_DIR$/src/Monster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/img/goblin.png" />
     <entry file="file://$PROJECT_DIR$/res/img/gandalf.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/Monster_Demon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Monster_Slime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Monster_Goblin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Monster_Gandalf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2602">
@@ -406,30 +469,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TitleScreenHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/ChoiceHandler.java">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SoundHandler.java">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="7" selection-end-column="5" />
+=======
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="7" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -438,28 +486,151 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InventoryHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        <state>
+          <caret lean-forward="true" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChoiceHandler.java">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Item.java" />
+    <entry file="file://$PROJECT_DIR$/src/Monster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="120" column="40" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="40" />
+        <state>
+          <caret lean-forward="true" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monster_Demon.java">
+      <provider selected="true" editor-type-id="text-editor">
+=======
+    <entry file="file://$PROJECT_DIR$/src/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="5" lean-forward="true" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monster_Demon.java">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
+        <state relative-caret-position="17">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monster_Gandalf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monster_Goblin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="321" lean-forward="true" selection-start-line="321" selection-end-line="321" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/UsernameValidator.java" />
+    <entry file="file://$PROJECT_DIR$/src/SoundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TitleScreenHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monster_Slime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InventoryHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Monster_Slime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BUAS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="430" column="52" selection-start-line="430" selection-start-column="52" selection-end-line="430" selection-end-column="52" />
+        <state relative-caret-position="34">
+          <caret line="24" selection-start-line="24" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SoundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TitleScreenHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UsernameValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-4464">
+          <caret line="470" column="40" selection-start-line="470" selection-start-column="40" selection-end-line="470" selection-end-column="40" />
+=======
+        <state relative-caret-position="84">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+>>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
