@@ -468,11 +468,7 @@ public class BUAS {
      */
     public static void pukulPenjaga() {
         position = "pukul penjaga";
-<<<<<<< HEAD
         mainTextArea.setText("Penjaga:\nDasar orang aneh masih berani kamu melawanku.\nPenjaga tersebut kemudian menjewer kuping anda.\n(Kamu menerima 3 kerusakan)");
-=======
-        mainTextArea.setText("Penjaga:\n Dasar orang aneh masih berani kamu melawanku.\nPenjaga tersebut kemudian menjewer kuping anda.\n(Kamu menerima 3 kerusakan)");
->>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
         playerHP = playerHP - 3;
         hpLabelNumber.setText("" + playerHP);
         choice1.setText(">");
@@ -486,11 +482,8 @@ public class BUAS {
      */
     public static void bicaraPerempuan() {
         position = "bicara perempuan";
-<<<<<<< HEAD
         mainTextArea.setText("Perempuan:\nHalo, Jika " + playerName + " datang kemari data kamu aman.");
-=======
-        mainTextArea.setText("Perempuan:\nHalo,Jika "+playerName+" datang kemari data kamu aman.");
->>>>>>> 5cb465e2278f95525058e262933256e88965f3dc
+
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");
