@@ -431,6 +431,13 @@ public class BUAS {
         nameLabelValue.setText(playerName);
         weaponLabelName.setText(weapon);
         hpLabelNumber.setText("" + playerHP);
+        inventoryStatus = "close";
+
+        playerItem[0] = Item.jamu.toString();
+        playerItem[1] = Item.jeruk.toString();
+        playerItem[2] = "";
+        playerItem[3] = "";
+        playerItem[4] = "";
 
         pintuGerbang();
     }
