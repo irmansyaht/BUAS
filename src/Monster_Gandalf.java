@@ -10,5 +10,6 @@ public class Monster_Gandalf extends Monster{
         hp = 800;
         attack = 6000;
         attackMessage = "YOU SHALL NOT PASS!";
+        type = MonsterType.magic;
     }
 }

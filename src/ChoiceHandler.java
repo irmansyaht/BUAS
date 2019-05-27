@@ -183,9 +183,34 @@ public class ChoiceHandler implements ActionListener {
                         Sound.gs.play();
                         BUAS.persimpangan();
                         break;
+                    case "c3":
+                        Sound.attackSound = ".//res//sfx//27858__erdie__sword04.wav";
+                        Sound.as.setFile(Sound.attackSound);
+                        Sound.as.play();
+                        BUAS.skillAttack();
+                        break;
                 }
                 break;
             case "playerAttack":
+                switch(yourChoice){
+                    case "c1":
+                        if(BUAS.monster.hp<1){
+                            Sound.winSound = ".//res//sfx//277441__xtrgamr__tones-of-victory.wav";
+                            Sound.ws.setFile(Sound.winSound);
+                            Sound.ws.play();
+                            BUAS.win();
+                        }
+                        else{
+                            Sound.monsterSound = ".//res//sfx//340162_flechabr_short-monster-roar (online-audio-converter.com).wav";
+                            Sound.ms.setFile(Sound.monsterSound);
+                            Sound.ms.play();
+                            BUAS.monsterAttack();
+                        }
+                        break;
+                }
+                break;
+
+            case "skillAttack":
                 switch(yourChoice){
                     case "c1":
                         if(BUAS.monster.hp<1){

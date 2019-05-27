@@ -9,4 +9,5 @@ public abstract class Monster {
     public int hp;
     public int attack;
     public String attackMessage;
+    public MonsterType type;
 }

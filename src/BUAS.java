@@ -624,7 +624,7 @@ public class BUAS {
         mainTextArea.setText("HP " + monster.name + ": " + monster.hp + "\n\nApa yang kamu lakukan?");
         choice1.setText("Serang");
         choice2.setText("Kabur");
-        choice3.setText("");
+        choice3.setText("Skill");
         choice4.setText("");
     }
 
@@ -642,15 +642,48 @@ public class BUAS {
             playerDamage = new java.util.Random().nextInt(12);
         }
 
-        mainTextArea.setText("Kamu menyerang Monster BUAS " + monster.name +
-                " dan memberi " + playerDamage + " kerusakan pada Monster!");
+        if (monster.type.equals(MonsterType.magic)){
+            int rate = new java.util.Random().nextInt(100);
+            if (rate < 50){
+                playerDamage = 0;
+            }
+            else if (monster.type.equals(MonsterType.physical)) {
+                playerDamage = playerDamage;
+            }
+        }
+        if (playerDamage != 0) {
+            mainTextArea.setText("Kamu menyerang Monster BUAS " + monster.name +
+                    " dan memberi " + playerDamage + " kerusakan pada Monster!");
+            monster.hp = monster.hp - playerDamage;
+        }
+        else{
+            mainTextArea.setText("Kamu menyerang Monster BUAS " + monster.name +
+                    "\n tetapi berhasil dihindari oleh monster tersebut");
+        }
+        choice1.setText(">");
+        choice2.setText("");
+        choice3.setText("");
+        choice4.setText("");
+    }
+    public static void skillAttack() {
+        position = "skillAttack";
+
+        int playerDamage = 0;
+
+        if (weapon.equals(Item.pisau.toString())) {
+            playerDamage = new java.util.Random().nextInt(6);
+        } else if (weapon.equals(Item.pedang.toString())) {
+            playerDamage = new java.util.Random().nextInt(18);
+        }
+
+        mainTextArea.setText("Kamu menyerang Monster BUAS dengan skill,\n" + monster.name +
+                " menerima " + playerDamage + " kerusakan.");
         monster.hp = monster.hp - playerDamage;
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
     }
-
     /**
      * Method untuk monster BUAS melakukan serangan kepada pemain
      */

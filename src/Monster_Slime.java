@@ -10,5 +10,6 @@ public class Monster_Slime extends Monster {
         hp = 18;
         attack = 8;
         attackMessage = "Enyah Kau!";
+        type = MonsterType.physical;
     }
 }

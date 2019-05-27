@@ -10,5 +10,6 @@ public class Monster_Demon extends Monster {
         hp = 25;
         attack = 9;
         attackMessage = "Enyah Kau!";
+        type = MonsterType.magic;
     }
 }
