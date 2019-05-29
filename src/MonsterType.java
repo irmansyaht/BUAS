@@ -14,7 +14,7 @@ public enum MonsterType {
     }
 
     /**
-     * Method untuk mengecek nama Item yang ada di dalam enum
+     * Method untuk mengecek tipe Monster yang ada di dalam enum
      * @param otherName nama lain yang di cek ada dalam enum
      * @return boolean ketika nama tersebut ada di dalam enum maka akan true dan sebaliknya akan false
      */
