@@ -10,5 +10,6 @@ public class Monster_Goblin extends Monster {
         hp = 20;
         attack = 6;
         attackMessage = "Enyah Kau!";
+		type = "physical";
     }
 }

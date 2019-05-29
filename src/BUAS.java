@@ -22,6 +22,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 /**
  * Kelas Utama Dalam Game BUAS
  * @author Irmansyah Turhamun, Dhio Makarim Utomo, Rizky Nurfaizi, M Haqy Aunoora
@@ -635,16 +636,36 @@ public class BUAS {
         position = "playerAttack";
 
         int playerDamage = 0;
+		int playerPhysicalDamage;
+		int playerMagicalDamage;
 
         if (weapon.equals(Item.pisau.toString())) {
             playerDamage = new java.util.Random().nextInt(3);
         } else if (weapon.equals(Item.pedang.toString())) {
             playerDamage = new java.util.Random().nextInt(12);
         }
-
-        mainTextArea.setText("Kamu menyerang Monster BUAS " + monster.name +
-                " dan memberi " + playerDamage + " kerusakan pada Monster!");
-        monster.hp = monster.hp - playerDamage;
+		
+		if (monster.type.equals("physical")){
+			playerPhysicalDamage = playerDamage;
+			playerMagicalDamage = playerDamage;
+		}
+		else {
+			playerPhysicalDamage = playerDamage/2;
+			playerMagicalDamage = playerDamage;
+		}
+		
+		int i = new java.util.Random().nextInt(100)+1;
+		if (i < 50){
+            mainTextArea.setText("Kamu menyerang Monster BUAS " + monster.name +
+                " dan memberi " + playerPhysicalDamage + " kerusakan physical pada Monster!");
+			monster.hp = monster.hp - playerPhysicalDamage;
+        }
+        else {
+            mainTextArea.setText("Kamu menyerang Monster BUAS " + monster.name +
+                " dan memberi " + playerMagicalDamage + " kerusakan magical pada Monster!");
+			monster.hp = monster.hp - playerMagicalDamage;
+        }
+        
         choice1.setText(">");
         choice2.setText("");
         choice3.setText("");

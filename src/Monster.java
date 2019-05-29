@@ -4,9 +4,11 @@
  *
  * @version 1.0 (Stable for Demo)
  * */
+ 
 public abstract class Monster {
     public String name;
     public int hp;
     public int attack;
     public String attackMessage;
+	public String type;
 }
