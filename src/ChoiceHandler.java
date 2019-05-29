@@ -178,6 +178,12 @@ public class ChoiceHandler implements ActionListener {
                         BUAS.playerAttack();
                         break;
                     case "c2":
+                        Sound.attackSound = ".//res//sfx//27858__erdie__sword04.wav";
+                        Sound.as.setFile(Sound.attackSound);
+                        Sound.as.play();
+                        BUAS.playerAttack();
+                        break;
+                    case "c3":
                         Sound.goSound = ".//res//sfx//267492__snudiorecords__footstep.wav";
                         Sound.gs.setFile(Sound.goSound);
                         Sound.gs.play();

@@ -7,6 +7,7 @@
 public class Monster_Slime extends Monster {
     public Monster_Slime(){
         name = "Slime";
+        type = "fisik";
         hp = 18;
         attack = 8;
         attackMessage = "Enyah Kau!";

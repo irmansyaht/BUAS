@@ -630,9 +630,9 @@ public class BUAS {
     public static void bertarung() {
         position = "bertarung";
         mainTextArea.setText("HP " + monster.name + ": " + monster.hp + "\n\nApa yang kamu lakukan?");
-        choice1.setText("Serang");
-        choice2.setText("Kabur");
-        choice3.setText("");
+        choice1.setText("Serang dengan fisik");
+        choice2.setText("Serang dengan kekuatan magis");
+        choice3.setText("Kabur");
         choice4.setText("");
     }
 
@@ -643,11 +643,31 @@ public class BUAS {
         position = "playerAttack";
 
         int playerDamage = 0;
+        String choice="";
+        String tipe = Monster.type;
 
         if (weapon.equals(Item.pisau.toString())) {
-            playerDamage = new java.util.Random().nextInt(3);
+            if (tipe=="Fisik"){
+                playerDamage = new java.util.Random().nextInt(3);
+            } else if (tipe=="Magis"){
+                playerDamage = new java.util.Random().nextInt(3);
+                if (choice=="Serang dengan kekuatan fisik"){
+                    playerDamage = playerDamage/2;
+                } else{
+                    playerDamage = playerDamage;
+                }
+            }
         } else if (weapon.equals(Item.pedang.toString())) {
-            playerDamage = new java.util.Random().nextInt(12);
+            if (tipe=="Fisik"){
+                playerDamage = new java.util.Random().nextInt(12);
+            } else if (tipe=="Magis"){
+                playerDamage = new java.util.Random().nextInt(12);
+                if (choice=="Serang dengan kekuatan fisik"){
+                    playerDamage = playerDamage/2;
+                } else{
+                    playerDamage = playerDamage;
+                }
+            }
         }
 
         mainTextArea.setText("Kamu menyerang Monster BUAS " + monster.name +

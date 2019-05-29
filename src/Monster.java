@@ -6,6 +6,7 @@
  * */
 public abstract class Monster {
     public String name;
+    public static String type;
     public int hp;
     public int attack;
     public String attackMessage;
